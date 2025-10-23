@@ -1,0 +1,3 @@
+/* 
+    logic dùng chung
+*/
