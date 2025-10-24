@@ -1,0 +1,27 @@
+.logo {
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+.logo img{
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    margin-top: 18px;
+}
+.container{
+    width: 1200px;
+}
+#header{
+    background-color: #F1F8FF;
+    height: 115px;
+    
+}
+.navbar{
+    float: right;
+    margin-top: 35px;
+}
+.nav-item{
+    margin-right: 20px;
+}
+
