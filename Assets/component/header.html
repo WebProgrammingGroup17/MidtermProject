@@ -1,0 +1,32 @@
+
+<!--
+    Đây là nơi chứa form html chung
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    
+    <!-- Include form chung -->
+     
+    <div id="form-container"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/form.js"></script>
+
+    <!-- Nếu muốn load form.html tự động -->
+     
+    <script>
+        fetch("components/form.html")
+            .then(res => res.text())
+            .then(html => document.getElementById("form-container").innerHTML = html);
+    </script>
+</body>
+</html>
+
