@@ -2,10 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Trang Chủ</title>
+    <title>InfinityTech</title>
 </head>
 <body>
-    <h1>Hello World</h1>
-</body>
 
+    <div id="header"></div>
+
+    <main>
+        <h2>hello</h2>
+    </main>
+
+    <div id="footer"></div>
+
+
+    <script>
+    // load header và footer
+    document.getElementById("header").innerHTML = fetch("/Assets/component/header.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header").innerHTML = data);
+
+    document.getElementById("footer").innerHTML = fetch("/Assets/component/footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
+</body>
 </html>
