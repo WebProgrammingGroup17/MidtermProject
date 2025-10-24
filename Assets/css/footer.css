@@ -4,8 +4,8 @@ body {
 }
 
 .footer {
-    background-color: #191919;
-    color: #ffffff;
+    background-color: #F1F8FF;
+    color: #545759;
     padding: 40px 60px;
 }
 
@@ -33,12 +33,12 @@ body {
 }
 
 .footer-section a {
-    color: #ffffff;
+    color: #545759;
     text-decoration: none;
 }
 
 .footer-section a:hover {
-    color: #ffffff;
+    color:#545759;
 }
 
 .subscribe {
@@ -56,8 +56,8 @@ body {
 }
 
 .subscribe button {
-    background-color: #191919;
-    color: #ffffff;
+    background-color: lightgray;
+    color: #545759;
     border: none;
     padding: 10px 15px;
     border-radius: 0 5px 5px 0;
@@ -69,6 +69,7 @@ body {
 
 .subscribe button:hover {
     background-color: #3D0BEB;
+    color: white;
 }
 
 .social-icons {
@@ -117,6 +118,6 @@ body {
 }
 
 .footer-section p {
-    color: #ffffff;
+    color: #545759;
     line-height: 1.6;
 }
