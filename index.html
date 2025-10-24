@@ -17,13 +17,14 @@
 
     <script>
     // load header và footer
-    document.getElementById("header").innerHTML = fetch("/Assets/component/header.html")
+    document.getElementById("header").innerHTML = fetch("Assets/component/header.html")
       .then(res => res.text())
       .then(data => document.getElementById("header").innerHTML = data);
 
-    document.getElementById("footer").innerHTML = fetch("/Assets/component/footer.html")
+    document.getElementById("footer").innerHTML = fetch("Assets/component/footer.html")
       .then(res => res.text())
       .then(data => document.getElementById("footer").innerHTML = data);
   </script>
 </body>
+
 </html>
