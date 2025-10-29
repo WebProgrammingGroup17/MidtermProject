@@ -1,27 +1,139 @@
-.logo {
-    width: 200px;
-    height: 200px;
-    float: left;
-}
-.logo img{
-    width: 80px;
-    height: 80px;
-    border-radius: 100px;
-    margin-top: 18px;
-}
-.container{
-    width: 1200px;
-}
-#header{
-    background-color: #F1F8FF;
-    height: 115px;
-    
-}
-.navbar{
-    float: right;
-    margin-top: 35px;
-}
-.nav-item{
-    margin-right: 20px;
+/* HEADER */
+#header {
+  background-color: #F1F8FF;
+  padding: 10px 5%;
 }
 
+/* CONTAINER */
+#header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* LOGO */
+.logo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+  gap: 20px;
+  flex-wrap: wrap;
+  transition: max-height 0.3s ease;
+}
+
+/* NAV ITEMS */
+.nav-items {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-items li a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-items li a:hover,
+.nav-items li a.active {
+  color: rgb(67, 239, 67);
+}
+
+/* ICONS */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cart {
+  position: relative;
+  cursor: pointer;
+}
+
+.cart .count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: red;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 50%;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.search input {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.search button {
+  background-color: #00ff55;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #000;
+}
+
+.user i {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* HAMBURGER */
+.hamburger {
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+  .nav-items {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    margin-left: 30px;
+    margin-top: 20px;
+  }
+
+  .nav-items.show {
+    display: flex;
+  }
+
+  .navbar {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .icons {
+    margin-top: 10px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+  
+}
