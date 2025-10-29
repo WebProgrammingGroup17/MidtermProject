@@ -8,8 +8,11 @@ body {
 
 /* Khu vực hiển thị cửa hàng */
 .shop-section {
-    padding: 40px 80px;
+    padding: 0;
     text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #191919;
 }
 
 /* Bố cục dạng lưới cho các thẻ sản phẩm */
