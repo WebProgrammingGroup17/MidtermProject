@@ -9,13 +9,15 @@
 
 /* CONTAINER */
 #header .container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+.right{
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 /* LOGO */
+
 .logo img {
   width: 80px;
   height: 80px;
