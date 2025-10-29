@@ -2,7 +2,7 @@
     logic dùng chung
 */
 // Load header
-      fetch("/Assets/component/header.html")
+      fetch("Assets/component/header.html")
         .then((res) => res.text())
         .then((data) => {
           document.getElementById("header").innerHTML = data;
@@ -36,8 +36,9 @@
           });
         });
       // Load footer
-fetch("/Assets/component/footer.html")
+fetch("Assets/component/footer.html")
   .then((res) => res.text())
   .then((data) => {
     document.getElementById("footer").innerHTML = data;
+
   });
