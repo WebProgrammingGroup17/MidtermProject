@@ -1,143 +1,171 @@
-/* HEADER */
-#header {
-  background-color: #F1F8FF;
-  padding: 10px 5%;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+.main-header{
+    width: 100%;
 }
-
-/* CONTAINER */
-#header .container {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
+html {
+  font-size: 16px;
+}
+.container{
+    width: min(80rem, 100%);
+    margin: auto;
+}
+.box-header{
+    display: grid;
+    grid-template-columns: 1fr 9fr 1fr;
+    padding: 5px;
+    height: 82px;
+}
+.logo img{
+    width: 6.44rem;
+}
+.center{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 0.5rem;
+    padding-bottom: 3.7rem;
+    gap: 10px;
 }
 .right{
-  display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.right i{
+    cursor: pointer;
+}
+.center-1 i{
+    color: #e85221;
+    margin-top: 1.5rem;
 }
 
-/* LOGO */
-
-.logo img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+.center-1 span{
+    color: #ff1c48;
+    font-weight: 700;
+    cursor: pointer;
 }
-
-/* NAVBAR */
-.navbar {
-  display: flex;
-  align-items: center;
-  flex: 1 1 auto;
-  justify-content: flex-end;
-  gap: 20px;
-  flex-wrap: wrap;
-  transition: max-height 0.3s ease;
+.center-1 span:hover{
+    color: #000000;
 }
-
-/* NAV ITEMS */
-.nav-items {
-  display: flex;
-  gap: 25px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
 }
-
-.nav-items li a {
-  color: black;
-  text-decoration: none;
-  font-weight: 500;
+.center-1 input{
+    width: 19rem;
+    height: 2rem;
+    border-radius: 5px;
+    background-color: #f3f3f3;
+    border: none;
+    width: 17rem;
+    float: right;
 }
-
-.nav-items li a:hover{
-  color: rgb(67, 239, 67);
+.menu3{
+    cursor: pointer;
+    padding: 15px;
 }
-
-/* ICONS */
-.icons {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+.menu3:hover{
+    background-color: #ae2c00;
 }
-
-.cart {
-  position: relative;
-  cursor: pointer;
+.search .bi-search{
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: -5px;
+    font-size: 1.2rem;
 }
-
-.cart .count {
-  position: absolute;
-  top: -5px;
-  right: -10px;
-  background-color: red;
-  color: #fff;
-  font-size: 0.7rem;
-  padding: 2px 5px;
-  border-radius: 50%;
+.center2{
+    padding-top: 20px;
 }
-
-.search {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+.center3{
+    padding-top: 13px;
 }
-
-.search input {
-  padding: 5px 10px;
-  border-radius: 5px;
-  border: none;
+.input1{
+    position: relative;
 }
-
-.search button {
-  background-color: #00ff55;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  color: #000;
+.search{
+    position: absolute;
+    right: -20px;
+    top: -12px;
 }
-
-.user i {
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-/* HAMBURGER */
-.hamburger {
-  font-size: 30px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: none;
-}
-
-
-/* RESPONSIVE */
-@media (max-width: 700px) {
-  .nav-items {
-    flex-direction: column;
-    width: 100%;
-    display: none;
-    margin-left: 30px;
-    margin-top: 20px;
-  }
-
-  .nav-items.show {
+.right{
+    padding: 15px;
     display: flex;
+    gap: 10px;
+}
+.icon i{
+    color: #e85221;
+    font-size: 25px;
+}
+.icon p{
+    font-size: 12px;
+    
+}
+.icon{
+    width: 70px;
+    text-align: center;
+}
+.cart{
+    position: relative;
+}
+.num{
+    position: absolute;
+    top: -5px;
+    right: 20px;
+}
+.menu2{
+    display: flex;
+    color:#f9f4ff;
+    justify-content: space-around;
+    gap: 10px;
+}
+.menu{
+     background-color: #e95221;
+}
+.hamburger{
+    font-size: 30px;
+    display: none;
+    width: 180px;
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 14px; 
   }
-
-  .navbar {
-    flex-direction: column;
-    width: 100%;
+  .center3{
+    padding-top: 20px;
   }
-
-  .icons {
-    margin-top: 10px;
-  }
-
-  .hamburger {
+  .hamburger,.search2{
     display: block;
+    padding-top: 28px;
+    cursor: pointer;
+  }
+  .menu{
+    display: none;
+  }
+  .center-1 b,span{
+    display: none;
+  }
+  .same-icon i{
+    display: none;
   }
   
+  .input1 input{
+    display: none;
+  }
+  .box-header{
+    display: flex;
+    justify-content: space-between;
+    }
+    .search, .center{
+        display: none;
+    }
+    .search2{
+        width: 30px;
+    }
+    .icon p{
+        display: none;
+    }
+    .icon{
+        padding-top: 15px;
+    }
+    .icon2 i{
+        padding-left: 50px;
+    }
 }

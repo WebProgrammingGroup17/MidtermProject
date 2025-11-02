@@ -4,7 +4,6 @@ body {
 }
 
 .footer {
-    background-color: #F1F8FF;
     color: #545759;
     padding: 40px 60px;
 }
@@ -69,7 +68,7 @@ body {
 }
 
 .subscribe button:hover {
-    background-color: #3D0BEB;
+    background-color: #e95221;
     color: white;
 }
 

@@ -1,49 +1,102 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
-/* ===== BASE ===== */
-body {
-  background-color: #000;
-  color: #fff;
-  line-height: 1.6;
+.slides img {
+  width: 100%;
+  display: none;
+  object-fit: cover;
+  cursor: pointer;
 }
 
-/* ===== HEADER ===== */
-.header {
+.slides img.active {
+  display: block;
+}
+
+/* Mũi tên */
+.arrows {
+  position: absolute;
+  top: 50%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px 10%;
-  background-color: #111;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  transform: translateY(-50%);
 }
 
-.logo {
-  font-size: 1.8rem;
-  color: #fff;
+.arrows span {
+  cursor: pointer;
+  font-size: 2rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 8px 12px;
+  border-radius: 50%;
+  user-select: none;
+  transition: background 0.3s;
 }
 
-.logo span {
-  color: #00ff88;
+.arrows span:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.nav a {
-  color: #ccc;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: 500;
-  transition: 0.3s;
+/* Dấu chấm */
+.dots {
+  position: absolute;
+  bottom: 15px;
 }
 
-.nav a:hover {
-  color: #00ff88;
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
 }
+
+.dot.active,
+.dot:hover {
+  background-color: #e95221;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+  margin: 0;
+}
+
+
 
 /* ===== HERO ===== */
 .hero {
@@ -78,7 +131,7 @@ a.btn {
 }
 
 a.btn:hover {
-  background-color: #00ff88;
+  background-color: #00ff55;
   color: #000;
 }
 
@@ -138,12 +191,12 @@ a.btn:hover {
 .best-prices {
   padding: 60px 10%;
   margin-top: 50px;
-  background-color: rgb(25,25,25);
+  margin-bottom: 50px;
+  color: #000;
 }
 
 .best-prices h2 {
   font-size: 2rem;
-  color: #fff;
   margin-bottom: 30px;
 }
 
@@ -154,17 +207,16 @@ a.btn:hover {
 }
 
 .product-card {
-  background-color: #000;
-  border: 1px solid #333;
+  border: 2px solid;
   border-radius: 8px;
   overflow: hidden;
   position: relative;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .product-card:hover {
   transform: translateY(-5px);
-  border-color: #00ff55;
 }
 
 .product-card img {
@@ -192,14 +244,15 @@ a.btn:hover {
 
 .info h3 {
   font-size: 1rem;
-  color: #fff;
+  color: #333;
   font-weight: 600;
   margin-bottom: 8px;
 }
 
 .price {
-  color: #fff;
   font-weight: 500;
+  color: #e8002d;
+  font-weight: 800;
 }
 
 .stars {
@@ -208,15 +261,14 @@ a.btn:hover {
 }
 
 .sold {
-  color: #aaa;
   font-size: 0.9rem;
   margin-bottom: 15px;
 }
 
 .buy-btn {
   width: 100%;
-  background-color: #00ff55;
-  color: #000;
+  background-color: #e95221;
+  color: #fff;
   border: none;
   padding: 10px;
   font-weight: 600;
@@ -226,7 +278,7 @@ a.btn:hover {
 }
 
 .buy-btn:hover {
-  background-color: #00cc44;
+  background-color: #802000;
 }
 
 /* ===== MACBOOK SECTION ===== */
@@ -241,6 +293,7 @@ a.btn:hover {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
 .text {
@@ -283,8 +336,8 @@ a.btn:hover {
 }
 
 .new-price {
-  background-color: #00ff55;
-  color: #000;
+  background-color: #e95221;
+  color: #fff;
   padding: 8px 15px;
   border-radius: 10px;
   font-weight: 700;
@@ -296,6 +349,7 @@ a.btn:hover {
   text-decoration: line-through;
   font-size: 1.1rem;
 }
+
 
 .image {
   flex: 1 1 50%;
@@ -358,15 +412,6 @@ a.btn:hover {
   color: #00ff55;
   font-weight: 600;
 }
-
-/* ===== FOOTER ===== */
-.footer {
-  text-align: center;
-  padding: 20px 10%;
-  background-color: #111;
-  color: #666;
-  font-size: 0.9rem;
-}
 .camera-section {
   background-color: #111;
   padding: 40px;
@@ -415,8 +460,8 @@ a.btn:hover {
 }
 
 .shop-btn {
-  background-color: #00ff6a;
-  color: #000;
+  background-color: #e95221;
+  color: #fff;
   border: none;
   padding: 12px 24px;
   font-weight: bold;
@@ -425,7 +470,7 @@ a.btn:hover {
 }
 
 .shop-btn:hover {
-  background-color: #00cc55;
+  background-color: #802000;
 }
 
 /* MIDDLE: Video + image */
@@ -457,10 +502,11 @@ a.btn:hover {
   border-radius: 10px;
 }
 .features {
+  font-family: "Roboto", sans-serif;
   display: flex;
   justify-content: center;
   align-items: stretch;
-  gap: 20px;
+  gap: 10px;
   padding: 20px 5%;
   background-color: #fff;
 }
@@ -522,6 +568,7 @@ a.btn:hover {
     width: 340px;
   }
   
+  
 }
 
 /* RESPONSIVE */
@@ -531,6 +578,9 @@ a.btn:hover {
   }
   .banner-text h2{
     font-size: 20px;
+  }
+  .price-box span{
+    display: block;
   }
   
 }
