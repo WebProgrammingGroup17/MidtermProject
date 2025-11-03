@@ -136,26 +136,6 @@ main{
     font-size: 14px;
 }
 
-/* Dropdown */
-/*.sort-menu {*/
-/*    position: absolute;*/
-/*    top: 100%;*/
-/*    left: 0;*/
-/*    min-width: 170px;*/
-/*    background: #fff;*/
-/*    border: 1px solid #ccc;*/
-/*    border-radius: 6px;*/
-/*    list-style: none;*/
-/*    padding: 0;*/
-/*    margin: 6px 0 0;*/
-/*    z-index: 2000;*/
-
-/*    !* Ẩn mặc định *!*/
-/*    display: none;*/
-/*    opacity: 0;*/
-/*    visibility: hidden;*/
-/*    transition: 0.2s;*/
-/*}*/
 
 .sort {
     position: relative;
@@ -186,7 +166,7 @@ main{
 
 
 /*------------------------------------------------*/
-/* ✅ Hiện dropdown */
+
 .sort:hover .sort-menu {
     display: block;
     opacity: 1;
@@ -198,7 +178,7 @@ main{
 .sort-menu li,
 .sort-box,
 .sort-menu {
-    user-select: none; /* ✅ tắt bôi đen text */
+    user-select: none;
 }
 
 
@@ -206,7 +186,7 @@ main{
 .sort-menu li {
     padding: 10px;
     cursor: pointer;
-    white-space: nowrap; /* ✅ Không bị xuống dòng */
+    white-space: nowrap;
     transition: background 0.2s ease, color 0.2s ease;
 }
 
@@ -215,13 +195,20 @@ main{
     color: #fff;
 
 }
-/*------------------SAN PHAM------------------------------------------------------------------------------------------------*/
-.product-list, .product-list2{
+/*------------------SAN PHAM--------------------------------------*/
+.product-list{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     width: 100%;
     margin-top: 20px;
+
+}
+.product-info{
+    min-height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
 }
 .product-item{
@@ -241,6 +228,17 @@ main{
     object-fit: contain;
     transition: transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1); /*hieu ung zoom anh*/
     will-change: transform;
+
+}
+.product-item h4 {
+    font-size: 15px;
+    line-height: 1.4;
+    margin: 8px 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+   color: #000;
 }
 .product-item .price{
     color: #E95221;
@@ -271,6 +269,44 @@ main{
     transform: scale(1.05);
 
 }
-.product-list2{
 
+
+@media (max-width: 900px) {
+    .filter {
+        display: none;
+    }
+
+    #content {
+        grid-template-columns: 1fr 1fr!important;
+        width: 100%;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+    .product-list {
+        grid-template-columns: repeat(2, minmax(180px, 1fr));
+        gap: 15px;
+    }
 }
+@media (max-width: 600px) {
+    .product-list {
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+        gap: 12px;
+    }
+}
+
+.product-item {
+    background: white;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    transition: 0.25s;
+    box-sizing: border-box;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
