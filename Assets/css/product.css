@@ -66,10 +66,7 @@ main{
     background: white;
     border-radius: 8px;
     box-sizing: border-box;
-    /*padding: 5px 10px;*/
-    /*box-shadow: 1px 2px 4px rgba(0,0,0,0.05);*/
-    /*height: auto;*/
-    /*justify-content: space-between;*/
+
 }
 .Loai{
     font-weight: bold;
@@ -92,7 +89,6 @@ main{
 }
 .sort{
     position: relative;
-    /*display: flex;*/
     display: inline-flex;
     align-items: center;
     gap: 5px;
@@ -355,6 +351,38 @@ body.filter-open::before {
     z-index: 1000;
 }
 }
+
+/*-----------PAGINATION----------*/
+.pagination{
+    display: flex;
+    gap: 6px;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+.pagination a{
+    color: #e64a19;
+    border: 1px solid #e64a19;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;   /* 👈 bỏ gạch chân */
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+.pagination a:hover{
+    color: white;
+    background: #e64a19;
+}
+.pagination .active{
+    background: #e64a19;
+    color: #fff;
+}
+
+
 
 
 
