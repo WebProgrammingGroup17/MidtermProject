@@ -120,7 +120,7 @@ main{
     min-width: 120px;
 
 
-    /* ✅ Giới hạn kích thước theo phần sort */
+    /* Giới hạn kích thước theo phần sort */
     max-width: 120px;
     white-space: nowrap;
 }
@@ -256,8 +256,8 @@ main{
 
 }
 .product-item:hover{
-    border-color: rgba(0,0,0,0.12); /* ✅ Border mờ, nhẹ */
-    box-shadow: 0 8px 18px rgba(0,0,0,0.10); /* ✅ Bóng mềm */
+    border-color: rgba(0,0,0,0.12); /* Border mờ, nhẹ */
+    box-shadow: 0 8px 18px rgba(0,0,0,0.10); /* Bóng mềm */
     transform: translate(-3px);
 
 }
@@ -300,5 +300,62 @@ main{
     height: auto;
     object-fit: contain;
 }
+
+/* Bộ lọc mặc định trên desktop */
+.filter {
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+    background: #fff;
+}
+
+/* Nút Bộ lọc chỉ hiện trên mobile */
+.filter-toggle {
+    display: none;
+    background: #f05a28;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Khi màn hình nhỏ hơn 700px */
+@media (max-width: 700px) {
+    .filter-toggle {
+        display: block;
+    }
+/* Ẩn panel mặc định */
+#filter-panel {
+    display: none;
+    position: fixed;
+    left: 0px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    z-index: 2001;
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+}
+#filter-panel.active {
+    display: block;
+    transform: translateX(0);
+}
+
+    /* Khi body có lớp filter-open -> thêm nền tối */
+body.filter-open::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+}
+
+
 
 

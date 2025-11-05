@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
+    <title>Sản phẩm</title>
     <link rel="stylesheet" href="../css/product.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
@@ -12,7 +12,7 @@
 
     <main id="content">
         <!--  loc san pham          -->
-            <div class="filter">
+            <div class="filter" id="filter-panel">
                 <div class="title">CHỌN MỨC GIÁ</div>
                 <div class="choice">
                     <input type="checkbox" class="check" id="check1" name="checkbox1" ><label>Giá dưới 500.000đ </label>
@@ -93,6 +93,10 @@
 
                     </div>
                 </div>
+
+                <button id="filter-btn" class="filter-toggle">
+                    <i class="fa-solid fa-sliders"></i> Bộ lọc
+                </button>
 
                 <!--  San Pham -->
                 <div id="product-list">

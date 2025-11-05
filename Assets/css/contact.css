@@ -55,7 +55,7 @@ body {
 
 /* ICON TRONG MỖI DÒNG */
 .info-item i {
-    color: #3d0beb;
+    color: #e95221;
     font-size: 22px;
     flex-shrink: 0;
 }
@@ -82,7 +82,7 @@ body {
     padding: 8px 10px;
     border: 1px solid #545759;
     border-radius: 6px;
-    background-color: #f1f8ff;
+    background-color: white;
     color: #545759;
     resize: none;
     height: 20px;
@@ -95,7 +95,7 @@ body {
 /* HIỆU ỨNG KHI NGƯỜI DÙNG CLICK VÀO Ô NHẬP */
 .feedback-input:focus {
     outline: none;
-    border-color: #3d0beb;
+    border-color: #e95221;
 }
 
 /* NÚT GỬI FEEDBACK */
