@@ -14,7 +14,6 @@
 .slides img.active {
   display: block;
 }
-
 /* Mũi tên */
 .arrows {
   position: absolute;
@@ -69,32 +68,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* {
-  margin: 0;
-}
 
 
 
@@ -502,7 +475,6 @@ a.btn:hover {
   border-radius: 10px;
 }
 .features {
-  font-family: "Roboto", sans-serif;
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -567,7 +539,12 @@ a.btn:hover {
   .product-container{
     width: 340px;
   }
-  
+  svg{
+    padding-right: 30px;
+  }
+  .text h4,p{
+    font-size: 20px;
+  }
   
 }
 

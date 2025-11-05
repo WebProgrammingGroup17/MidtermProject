@@ -100,7 +100,7 @@ body {
 
 /* NÚT GỬI FEEDBACK */
 .feedback-btn {
-    background-color: #3d0beb;
+    background-color: #e95221;
     color: white;
     border: none;
     padding: 12px 24px;
@@ -112,7 +112,7 @@ body {
 
 /* HIỆU ỨNG HOVER CHO NÚT */
 .feedback-btn:hover {
-    background-color: #2b08b2;
+    background-color: #ae2c00;
 }
 
 /* PHẦN ẢNH BÊN PHẢI */

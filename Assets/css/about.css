@@ -38,7 +38,7 @@ body{
 }
 
 .info-box h4 {
-    color: #3D0BEB;
+    color: #e95221;
     margin-bottom: 8px;
     font-size: 18px;
 }
@@ -112,7 +112,7 @@ body{
 
 }
 .box i{
-    color: #3D0BEB;
+    color: #e95221;
     font-size: 70px;
 }
 .box:hover{
@@ -194,7 +194,7 @@ h3{
 .do h3{
     margin: 10px 0 8px 0;
     font-size: 26px;
-    color: #3D0BEB;
+    color: #e95221;
 }
 .do p{
     color: #545759;
@@ -246,7 +246,7 @@ h3{
     border: #3D0BEB solid 1px;
 }
 .text h4{
-    color: #3D0BEB;
+    color: #e95221;
     text-align: right;
     margin-top: 10px;
 

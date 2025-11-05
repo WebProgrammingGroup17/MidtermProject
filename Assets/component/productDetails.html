@@ -1,181 +1,138 @@
 <!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chi tiết sản phẩm</title>
-    <link rel="stylesheet" href="/Assets/css/productDetails.css">
-</head>
-<body>
-<main>
-    <!--Danh sách sản phẩm -->
-    <section id="product-list" class="product-list"></section>
-
-    <!-- Chi tiết sản phẩm -->
-    <section id="product-details" class="product-details hidden">
+    <link rel="stylesheet" href="/Assets/css/productDetails.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <main>
+      <!-- Chi tiết sản phẩm -->
+      <section id="product-details" class="product-details">
         <div class="product-container">
-            <div class="left">
-                <img id="product-image" alt="">
-                <div id="product-gallery" class="gallery"></div>
+          <div class="left">
+            <img id="product-image" alt="" />
+            <div id="product-gallery" class="gallery"></div>
+          </div>
+
+          <div class="right">
+            <h2 id="product-name"></h2>
+            <p><strong>Mã sản phẩm:</strong> <span id="product-id"></span></p>
+            <p>
+              <strong>Danh mục:</strong> <span id="product-category"></span>
+            </p>
+            <p class="price" id="product-price"></p>
+            <p>
+              <strong>Tình trạng:</strong>
+              <span style="color: red">Còn hàng</span>
+            </p>
+
+            <!-- Khung ưu đãi + mô tả ngắn -->
+            <div class="product-info-box">
+              <div class="product-offer">
+                <h3>Ưu đãi</h3>
+                <ul id="product-bonus"></ul>
+              </div>
+              <div class="product-description" id="product-description">
+                <h3>Mô tả sản phẩm</h3>
+              </div>
             </div>
 
-            <div class="right">
-                <h2 id="product-name"></h2>
-                <p><strong>Mã sản phẩm:</strong> <span id="product-id"></span></p>
-                <p><strong>Danh mục:</strong> <span id="product-category"></span></p>
-                <p class="price" id="product-price"></p>
-                <p><strong>Tình trạng:</strong> <span style="color:red;">Còn hàng</span></p>
-
-                <!-- Khung ưu đãi + mô tả ngắn -->
-                <div class="product-info-box">
-                    <div class="product-offer">
-                        <h3>Ưu đãi</h3>
-                        <ul id="product-bonus"></ul>
-                    </div>
-                    <div class="product-description" id="product-description">
-                        <h3>Mô tả sản phẩm</h3>
-                    </div>
-                </div>
-
-                <!-- Hàng 1: tăng/giảm số lượng -->
-                <div class="quantity-row">
-                    <div class="quantity-control">
-                        <button id="decrease">−</button>
-                        <span id="quantity">1</span>
-                        <button id="increase">+</button>
-                    </div>
-                </div>
-
-                <!-- Hàng 2: nút thêm giỏ + mua ngay -->
-                <div class="action-row">
-                    <button id="cart-btn">Thêm vào giỏ hàng</button>
-                    <button id="buy-btn">Mua ngay</button>
-                </div>
-
-                <!-- Hàng 3: nút quay lại -->
-                <div class="back-row">
-                    <button id="back-btn">← Quay lại</button>
-                </div>
+            <!-- Hàng 1: tăng/giảm số lượng -->
+            <div class="quantity-row">
+              <div class="quantity-control">
+                <button id="decrease">−</button>
+                <span id="quantity">1</span>
+                <button id="increase">+</button>
+              </div>
             </div>
+
+            <!-- Hàng 2: nút thêm giỏ + mua ngay -->
+            <div class="action-row">
+              <button id="cart-btn">Thêm vào giỏ hàng</button>
+              <button id="buy-btn">Mua ngay</button>
+            </div>
+
+            <!-- Hàng 3: nút quay lại -->
+            <div class="back-row">
+              <button id="back-btn">← Quay lại</button>
+            </div>
+          </div>
         </div>
 
         <!-- Phần mô tả chi tiết & thông số kỹ thuật -->
         <section class="product-detail-info">
-            <div class="description-section">
-                <h3>Mô tả chi tiết</h3>
-                <p id="product-full-description"></p>
-            </div>
+          <div class="description-section">
+            <h3>Mô tả chi tiết</h3>
+            <p id="product-full-description"></p>
+          </div>
 
-            <div class="specs-section">
-                <h3>Thông số kỹ thuật</h3>
-                <table id="product-specs">
-                    <tr><th>Thuộc tính</th><th>Giá trị</th></tr>
-                </table>
-            </div>
+          <div class="specs-section">
+            <h3>Thông số kỹ thuật</h3>
+            <table id="product-specs">
+              <tr>
+                <th>Thuộc tính</th>
+                <th>Giá trị</th>
+              </tr>
+            </table>
+          </div>
         </section>
-    </section>
-</main>
+      </section>
+    </main>
+    <div id="footer"></div>
+    <script src="/Assets/js/main.js"></script>
+    <script>
 
-<script>
-    async function loadProducts() {
-        const res = await fetch('/Assets/json/productDetails.json');
-        const products = await res.json();
-        const list = document.getElementById('product-list');
+        document.addEventListener("DOMContentLoaded", () => {
+  // Lấy id từ URL
+  const params = new URLSearchParams(window.location.search);
+  const productId = params.get("id");
 
-        products.forEach(p => {
-            const card = document.createElement('div');
-            card.className = 'product-card';
-            card.innerHTML = `
-        <img src="${p.image}" alt="${p.name}">
-        <h3>${p.name}</h3>
-        <p>${p.category}</p>
-        <p class="price">${p.price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}</p>
-      `;
-            card.onclick = () => showProduct(p);
-            list.appendChild(card);
-        });
-    }
+  // Lấy dữ liệu từ file JSON
+  fetch("/Assets/json/productDetails.json") // đường dẫn đến file JSON của mày
+    .then(res => res.json())
+    .then(data => {
+      const product = data.find(p => p.id === productId);
+      if (!product) return;
 
-    function showProduct(p) {
-        document.getElementById('product-list').classList.add('hidden');
-        const detail = document.getElementById('product-details');
-        detail.classList.remove('hidden');
+      // Hiển thị dữ liệu lên giao diện
+      document.getElementById("product-name").textContent = product.name;
+      document.getElementById("product-id").textContent = product.id;
+      document.getElementById("product-category").textContent = product.category;
+      document.getElementById("product-price").textContent = product.price.toLocaleString("vi-VN") + " ₫";
+      document.getElementById("product-description").innerHTML += `<p>${product.description}</p>`;
+      document.getElementById("product-full-description").textContent = product.fullDescription;
 
-        document.getElementById('product-name').textContent = p.name;
-        document.getElementById('product-id').textContent = p.id;
-        document.getElementById('product-category').textContent = p.category;
-        document.getElementById('product-price').textContent =
-            p.price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+      // Ảnh chính
+      document.getElementById("product-image").src = product.image;
 
-        document.getElementById('product-description').innerHTML =
-            `<h3>Mô tả sản phẩm</h3><p>${p.description}</p>`;
-        document.getElementById('product-image').src = p.image;
+      // Gallery ảnh nhỏ
+      const gallery = document.getElementById("product-gallery");
+      gallery.innerHTML = product.gallery
+        .map(img => `<img src="${img}" alt="">`)
+        .join("");
 
-        const gallery = document.getElementById('product-gallery');
-        gallery.innerHTML = "";
-        p.gallery.forEach(img => {
-            const thumb = document.createElement('img');
-            thumb.src = img;
-            thumb.onclick = () => document.getElementById('product-image').src = img;
-            gallery.appendChild(thumb);
-        });
+      // Ưu đãi
+      const bonusList = document.getElementById("product-bonus");
+      bonusList.innerHTML = product.bonus
+        .map(b => `<li>${b}</li>`)
+        .join("");
 
-        const bonusList = document.getElementById('product-bonus');
-        bonusList.innerHTML = "";
-        p.bonus.forEach(b => {
-            const li = document.createElement('li');
-            li.textContent = b;
-            bonusList.appendChild(li);
-        });
+      // Thông số kỹ thuật
+      const specsTable = document.getElementById("product-specs");
+      for (let key in product.specs) {
+        const row = document.createElement("tr");
+        row.innerHTML = `<td>${key}</td><td>${product.specs[key]}</td>`;
+        specsTable.appendChild(row);
+      }
 
-        // Thêm mô tả chi tiết
-        document.getElementById('product-full-description').textContent =
-            p.fullDescription || "Không có mô tả chi tiết.";
+      document.querySelector(".product-details").classList.remove("hidden");
+    })
+    .catch(err => console.error("Lỗi khi tải JSON:", err));
+});
 
-        // Hiển thị thông số kỹ thuật
-        const specsTable = document.getElementById('product-specs');
-        if (p.specs && Object.keys(p.specs).length > 0) {
-            specsTable.innerHTML = `<tr><th>Thuộc tính</th><th>Giá trị</th></tr>`;
-            for (const [key, value] of Object.entries(p.specs)) {
-                const row = document.createElement('tr');
-                row.innerHTML = `<td>${key}</td><td>${value}</td>`;
-                specsTable.appendChild(row);
-            }
-        } else {
-            specsTable.innerHTML = `<tr><td colspan="2">Không có thông số kỹ thuật</td></tr>`;
-        }
-    }
-
-    // Nút quay lại
-    document.getElementById('back-btn').onclick = () => {
-        document.getElementById('product-details').classList.add('hidden');
-        document.getElementById('product-list').classList.remove('hidden');
-    };
-
-    // Logic tăng giảm số lượng
-    const quantitySpan = document.getElementById('quantity');
-    let quantity = 1;
-
-    document.getElementById('increase').onclick = () => {
-        quantity++;
-        quantitySpan.textContent = quantity;
-    };
-
-    document.getElementById('decrease').onclick = () => {
-        if (quantity > 1) quantity--;
-        quantitySpan.textContent = quantity;
-    };
-
-    // Sự kiện 2 nút
-    document.getElementById('cart-btn').onclick = () => {
-        alert(`Đã thêm ${quantity} sản phẩm vào giỏ hàng!`);
-    };
-
-    document.getElementById('buy-btn').onclick = () => {
-        alert(`Bạn đã mua ${quantity} sản phẩm thành công!`);
-    };
-
-    loadProducts();
-</script>
-</body>
+    </script>
+  </body>
 </html>

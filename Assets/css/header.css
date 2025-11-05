@@ -8,6 +8,40 @@ html {
     width: min(80rem, 100%);
     margin: auto;
 }
+.register-login{
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #000;
+    background-color: #fffbfb;
+    top: 46px;
+    right: 190px;
+}
+.icon2:hover + .register-login,
+.register-login:hover {
+  display: block;
+}
+.a-same-nodecoration{
+    text-decoration: none;
+    color: #333;
+}
+.no-margin:hover{
+    background-color: #e95221;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+.icon2{
+    position: relative;
+}
+.no-margin{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 5px;
+    padding: 5px;
+}
+.no-margin p{
+    margin: 0;
+}
 .box-header{
     display: grid;
     grid-template-columns: 1fr 9fr 1fr;
@@ -24,11 +58,11 @@ html {
     padding-bottom: 3.7rem;
     gap: 10px;
 }
-.right{
+.right1{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-.right i{
+.right1 i{
     cursor: pointer;
 }
 .center-1 i{
@@ -85,7 +119,7 @@ body{
     right: -20px;
     top: -12px;
 }
-.right{
+.right1{
     padding: 15px;
     display: flex;
     gap: 10px;
@@ -102,19 +136,21 @@ body{
     width: 70px;
     text-align: center;
 }
+.icon2{
+    height: 40px;
+}
 .cart{
     position: relative;
 }
 .num{
     position: absolute;
-    top: -5px;
+    top: -17px;
     right: 20px;
 }
 .menu2{
     display: flex;
     color:#f9f4ff;
-    justify-content: space-around;
-    gap: 10px;
+    justify-content: center;
 }
 .menu{
      background-color: #e95221;
@@ -123,6 +159,10 @@ body{
     font-size: 30px;
     display: none;
     width: 180px;
+}
+.menu2 a{
+    text-decoration: none;
+    color: #fff;
 }
 @media (max-width: 768px) {
   html {
@@ -159,9 +199,7 @@ body{
     .search2{
         width: 30px;
     }
-    .icon p{
-        display: none;
-    }
+    
     .icon{
         padding-top: 15px;
     }

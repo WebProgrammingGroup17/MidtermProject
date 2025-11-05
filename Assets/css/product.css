@@ -15,14 +15,12 @@ main{
     display: grid;
     grid-template-columns: 280px 1fr;
     gap: 20px;
-    width: 1200px;
     margin: 30px auto;
     align-items: start;
 }
 .filter{
     background: #ffffff;
     /*width: 20%;*/
-    width: 270px;
     margin-left: 20px;
     height: fit-content;
     border: lightgrey solid 1px;
@@ -72,9 +70,6 @@ main{
     /*box-shadow: 1px 2px 4px rgba(0,0,0,0.05);*/
     /*height: auto;*/
     /*justify-content: space-between;*/
-
-
-
 }
 .Loai{
     font-weight: bold;
@@ -196,7 +191,7 @@ main{
 
 }
 /*------------------SAN PHAM--------------------------------------*/
-.product-list{
+#product-list{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
@@ -220,6 +215,7 @@ main{
     box-shadow 0.25s ease,
     transform 0.25s ease;
     border: 1px solid transparent;
+    cursor: pointer;
 
 }
 .product-item img{
@@ -275,23 +271,19 @@ main{
     .filter {
         display: none;
     }
+    #content{
+        display: grid;
+        grid-template-columns: 1fr;  
+    }
+    #product-list{
+        display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
 
-    #content {
-        grid-template-columns: 1fr 1fr!important;
-        width: 100%;
-        padding: 0 15px;
-        margin: 0 auto;
-    }
-    .product-list {
-        grid-template-columns: repeat(2, minmax(180px, 1fr));
-        gap: 15px;
-    }
 }
-@media (max-width: 600px) {
-    .product-list {
-        grid-template-columns: repeat(1, minmax(200px, 1fr));
-        gap: 12px;
-    }
+
 }
 
 .product-item {
