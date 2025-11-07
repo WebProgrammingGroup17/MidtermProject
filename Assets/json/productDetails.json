@@ -58,11 +58,11 @@
       "Màn hình": "7 inch, 1280x800, chống chói",
       "Thời lượng pin": "2 - 8 giờ"
     },
-    "image": "/Assets/image/pd_steam_deck _512GB.webp",
+    "image": "/Assets/image/pd_steam_deck_512GB.webp",
     "gallery": [
-      "/Assets/image/pd_steam_deck _512GB.webp",
+      "/Assets/image/pd_steam_deck_512GB.webp",
       "/Assets/image/pd_steam_deck_512GB1.webp",
-      "/Assets/image/pd_steam_deck _512GB2.webp"
+      "/Assets/image/pd_steam_deck_512GB2.webp"
     ],
     "bonus": ["Tặng hộp đựng cứng cao cấp", "Hỗ trợ cập nhật firmware trọn đời"]
   },

@@ -144,12 +144,13 @@ body{
 
 }
 /*----------PHAN 3----------*/
-h3{
+
+.title {
+    text-align: center;
     margin-top: 80px;
     margin-bottom: 40px;
-    text-align: center;
-    font-size: 26px;
 }
+
 /*What we do*/
 .we-do{
     display: flex;
@@ -227,8 +228,12 @@ h3{
     flex-wrap: wrap;
     max-width: 1200px;
     gap: 20px;
-    margin: 80px auto 80px;
-    padding: 0;
+    /*margin: 80px auto 80px;*/
+    /*padding: 0;*/
+
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 
 }
 .final-content .text{
@@ -266,3 +271,4 @@ h3{
         max-width: 600px;
     }
 }
+
