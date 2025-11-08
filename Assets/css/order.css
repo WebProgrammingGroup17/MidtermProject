@@ -1,0 +1,114 @@
+/* Tổng thể trang */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 80px;
+}
+
+/*PHẦN TÀI KHOẢN*/
+.account-info {
+  width: 30%;
+}
+
+.account-info h2 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.account-info p {
+  font-size: 15px;
+  margin: 6px 0;
+}
+
+.username {
+  color: #e85a0b;
+  font-weight: bold;
+}
+
+.info p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+.info i {
+  color: #e85a0b;
+  margin-right: 5px;
+}
+
+.edit-btn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: #e85a0b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.edit-btn:hover {
+  background-color: #c94d09;
+}
+
+/*PHẦN ĐƠN HÀNG */
+.order-section {
+  width: 65%;
+}
+
+.order-section h3 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.order-table th,
+.order-table td {
+  border: 1px solid #f0f0f0;
+  padding: 12px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.order-table th {
+  background-color: #e85a0b;
+  color: white;
+  font-weight: bold;
+}
+
+.no-order {
+  text-align: center;
+  color: #666;
+  padding: 20px 0;
+}
+
+/* Responsive cho mobile */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .account-info,
+  .order-section {
+    width: 100%;
+  }
+
+  .edit-btn {
+    width: 100%;
+  }
+}
