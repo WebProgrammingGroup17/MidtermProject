@@ -20,12 +20,18 @@
         <div class="container">
           <div class="box-header">
             <div class="hamburger">
-              <i class="bi bi-list"></i>
+              <i class="bi bi-list" id="menuBTN"></i>
               <i class="bi bi-search" style="font-size: 26px"></i>
             </div>
+            <div class="menu-small-frame" style="display: none;" id="menu-small">
+              <div><a href=""><p>Trang Chủ</p></a></div>
+              <div><a href=""><p>Sản Phẩm</p></a></div>
+              <div><a href=""><p>Giới Thiệu</p></a></div>
+              <div><a href=""><p>Liên Hệ</p></a></div>
+            </div>
             <div class="logo">
-              <a href=""
-                ><img
+              <a href="/index.html"
+                ><img title="logo"
                   src="https://png.pngtree.com/png-clipart/20230217/original/pngtree-gaming-gamepad-icon-png-image_8957696.png"
                   alt="logo"
               /></a>
@@ -33,7 +39,7 @@
             <div class="center">
               <div class="center-1 same-icon">
                 <i class="fa-solid fa-headset"></i>
-                <b style="font-size: 13px">HOTLINE:</b> <span>0123456789</span>
+                <b style="font-size: 13px">HOTLINE:</b> <span title="hotline">0123456789</span>
               </div>
               <div class="center-1 center2 same-icon">
                 <i class="bi bi-geo-alt-fill"></i>
@@ -42,7 +48,7 @@
               <div class="center-1 center3">
                 <div class="input1">
                   <input type="text" placeholder="Tìm sản phẩm..." />
-                  <div class="search"><i class="bi bi-search"></i></div>
+                  <div class="search"><i title="tìm kiếm" class="bi bi-search"></i></div>
                 </div>
               </div>
             </div>
@@ -96,9 +102,9 @@
           </div>
 
 
-              <div class="icon">
+              <a href="/Assets/component/cart.html"><div class="icon">
                 <div class="cart">
-                  <i class="bi bi-cart2"></i>
+                  <i class="bi bi-cart2" title="cart"></i>
                   <div class="num">
                     <p
                       style="
@@ -112,8 +118,9 @@
                     </p>
                   </div>
                 </div>
-                <p style="margin: 0">GIỎ HÀNG</p>
+                <p class="cart3">GIỎ HÀNG</p>
               </div>
+              </a>
             </div>
           </div>
 
@@ -126,22 +133,22 @@
         <div class="menu">
           <div class="container">
             <div class="menu2">
-              <a href="/index.html"><div class="menu3">TRANG CHỦ</div></a>
+              <a href="/index.html"><div title="menu" class="menu3">TRANG CHỦ</div></a>
               <a href="/Assets/component/products.html"
-                ><div class="menu3">SẢN PHẨM</div></a
+                ><div title="menu" class="menu3">SẢN PHẨM</div></a
               >
               
               <a href="/Assets/component/about.html"
-                ><div class="menu3">GIỚI THIỆU</div></a
+                ><div title="menu" class="menu3">GIỚI THIỆU</div></a
               >
               <a href="/Assets/component/contact.html"
-                ><div class="menu3">LIÊN HỆ</div></a
+                ><div title="menu" class="menu3">LIÊN HỆ</div></a
               >
             </div>
           </div>
         </div>
       </div>
     </header>
-    
+    <script src="/Assets/js/header.js"></script>
   </body>
 </html>
