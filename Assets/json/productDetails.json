@@ -13,11 +13,9 @@
       "Thời lượng pin": "4.5 - 9 giờ",
       "Trọng lượng": "420g"
     },
-    "image": "/Assets/image/pd_nintendo_switch_oled.jpg",
+    "image": "/Assets/image/products1.png",
     "gallery": [
-      "/Assets/image/pd_nintendo_switch_oled.jpg",
-      "/Assets/image/pd_nintendo_switch_oled1.jpg",
-      "/Assets/image/pd_nintendo_switch_oled2.jpg"
+      "/Assets/image/products1.png"
     ],
     "bonus": ["Bảo hành 12 tháng", "Tặng túi đựng console", "Tặng ốp bảo vệ Joy-Con"]
   },
@@ -36,11 +34,9 @@
       "Độ phân giải": "Tối đa 8K",
       "Trọng lượng": "4.5 kg"
     },
-    "image": "/Assets/image/pd_playStation_5_standard.webp",
+    "image": "/Assets/image/products2.png",
     "gallery": [
-      "/Assets/image/pd_playStation_5_standard.webp",
-      "/Assets/image/pd_playStation_5_standard1.webp",
-      "/Assets/image/pd_playStation_5_standard2.webp"
+      "/Assets/image/products2.png"
     ],
     "bonus": ["Bảo hành 12 tháng", "Miễn phí giao hàng toàn quốc"]
   },
@@ -58,11 +54,9 @@
       "Màn hình": "7 inch, 1280x800, chống chói",
       "Thời lượng pin": "2 - 8 giờ"
     },
-    "image": "/Assets/image/pd_steam_deck _512GB.webp",
+    "image": "/Assets/image/products3.png",
     "gallery": [
-      "/Assets/image/pd_steam_deck _512GB.webp",
-      "/Assets/image/pd_steam_deck_512GB1.webp",
-      "/Assets/image/pd_steam_deck _512GB2.webp"
+      "/Assets/image/products3.png"
     ],
     "bonus": ["Tặng hộp đựng cứng cao cấp", "Hỗ trợ cập nhật firmware trọn đời"]
   },
@@ -80,11 +74,9 @@
       "Tương thích": "PS5 (Remote Play)",
       "Trọng lượng": "530g"
     },
-    "image": "/Assets/image/pd_playStation_portal.webp",
+    "image": "/Assets/image/products4.png" ,
     "gallery": [
-      "/Assets/image/pd_playStation_portal.webp",
-      "/Assets/image/pd_playStation_portal1.webp",
-      "/Assets/image/pd_playStation_portal2.webp"
+      "/Assets/image/products4.png" 
     ],
     "bonus": ["Tặng dây sạc USB-C", "Hỗ trợ kỹ thuật 24/7"]
   },
@@ -103,12 +95,77 @@
       "Độ phân giải": "Tối đa 4K@120Hz",
       "Trọng lượng": "4.45 kg"
     },
-    "image": "/Assets/image/pd_Xbox_Series_X.webp",
+    "image": "/Assets/image/products2_1.png",
     "gallery": [
-      "/Assets/image/pd_Xbox_Series_X.webp",
-      "/Assets/image/pd_Xbox_Series_X1.jpg",
-      "/Assets/image/pd_Xbox_Series_X2.jpg"
+      "/Assets/image/products2_1.png"
     ],
     "bonus": ["Bảo hành chính hãng 12 tháng", "Tặng gói Game Pass 3 tháng"]
+  },
+
+  {
+    "id": "p1",
+    "name": "Xbox Game Pass",
+    "category": "Console",
+    "price": 16520000,
+    "description": "Bộ điều khiển Xbox Game Pass chính hãng.",
+    "fullDescription": "Xbox Game Pass mang đến trải nghiệm chơi game đỉnh cao với thiết kế công thái học, giúp người chơi cảm thấy thoải mái trong nhiều giờ liên tục. Tay cầm có độ nhạy cực cao, phản hồi chính xác từng chuyển động nhỏ. Sản phẩm hỗ trợ kết nối Bluetooth 5.0 ổn định, tương thích với nhiều thiết bị như Xbox, PC và điện thoại di động. Chất liệu nhựa cao cấp kết hợp bề mặt chống trượt giúp cầm nắm chắc chắn. Nút bấm được tinh chỉnh mềm mại hơn, giúp thao tác nhanh và êm ái. Game thủ có thể dễ dàng tùy chỉnh cấu hình điều khiển thông qua ứng dụng Xbox Accessories. Pin dung lượng lớn giúp chơi liên tục hàng giờ mà không cần sạc lại. Tay cầm còn được trang bị cổng âm thanh 3.5mm để kết nối tai nghe. Sản phẩm thích hợp cho cả người mới bắt đầu và game thủ chuyên nghiệp. Đây là lựa chọn tuyệt vời cho những ai muốn tận hưởng trải nghiệm chơi game mượt mà và chân thực nhất.",
+    "image": "/Assets/image/console.webp",
+    "gallery": ["/Assets/image/console.webp"],
+    "bonus": ["Giảm 20%", "Bảo hành 12 tháng", "Tặng túi đựng cao cấp"],
+    "specs": {
+      "Kết nối": "Bluetooth 5.0",
+      "Trọng lượng": "138g",
+      "Tương thích": "Xbox, PC, Mobile"
+    }
+  },
+  {
+    "id": "p2",
+    "name": "Meta Quest 3S",
+    "category": "VR",
+    "price": 18340000,
+    "description": "Kính thực tế ảo Meta Quest 3S.",
+    "fullDescription": "Meta Quest 3S là bước đột phá trong công nghệ thực tế ảo, mang đến trải nghiệm sống động và chân thực đến từng chi tiết. Với độ phân giải 4K sắc nét, mọi hình ảnh đều được tái hiện rõ ràng và tự nhiên. Bộ xử lý mạnh mẽ cho phép chạy mượt các ứng dụng và trò chơi VR cao cấp. Thiết kế nhẹ chỉ 450g giúp người dùng đeo lâu mà không mỏi cổ. Hệ thống âm thanh 3D tích hợp đem lại cảm giác nhập vai chân thực. Dung lượng 256GB giúp lưu trữ hàng trăm trò chơi và nội dung đa phương tiện. Sản phẩm hỗ trợ điều khiển bằng tay cầm cảm ứng nhạy, phản hồi chính xác từng cử động. Meta Quest 3S còn có khả năng theo dõi chuyển động toàn thân và hiển thị môi trường xung quanh với công nghệ passthrough. Đây là lựa chọn hoàn hảo cho game thủ, nhà sáng tạo nội dung và người yêu công nghệ. Kính thực tế ảo Meta Quest 3S mở ra một thế giới mới — nơi ranh giới giữa ảo và thật gần như biến mất.",
+    "image": "/Assets/image/baner3.webp",
+    "gallery": ["/Assets/image/baner3.webp"],
+    "bonus": ["Giảm 20%", "Tặng tay cầm cảm ứng", "Bảo hành 24 tháng"],
+    "specs": {
+      "Độ phân giải": "4K",
+      "Dung lượng": "256GB",
+      "Trọng lượng": "450g"
+    }
+  },
+  {
+    "id": "p3",
+    "name": "Xbox Game Pass 2",
+    "category": "Console",
+    "price": 9020000,
+    "description": "Phiên bản nâng cấp Xbox Game Pass 2.",
+    "fullDescription": "Sản phẩm kế nhiệm của Xbox Game Pass với cải tiến mạnh mẽ về hiệu năng và cảm giác cầm nắm. Tay cầm được tối ưu cho phản hồi rung chi tiết hơn. Tương thích hoàn hảo với Xbox Series X|S và PC. Bluetooth 5.1 giúp kết nối nhanh và ổn định hơn. Thiết kế mới với tông màu sang trọng và bền bỉ. Nút D-Pad cải tiến giúp điều khiển chính xác hơn. Hỗ trợ nhiều tựa game với chế độ rung đa tầng. Cổng USB-C cho tốc độ sạc nhanh hơn. Pin hoạt động liên tục hơn 30 giờ. Phù hợp cho game thủ muốn nâng cấp trải nghiệm.",
+    "image": "/Assets/image/baner4.webp",
+    "gallery": ["/Assets/image/baner4.webp"],
+    "bonus": ["Giảm 20%", "Bảo hành 18 tháng", "Hỗ trợ kỹ thuật 24/7"],
+    "specs": {
+      "Kết nối": "Bluetooth 5.1",
+      "Thời lượng pin": "30 giờ",
+      "Tương thích": "Xbox Series X|S, PC"
+    }
+  },
+  {
+    "id": "p4",
+    "name": "PlayStation 5",
+    "category": "Console",
+    "price": 20230000,
+    "description": "Máy chơi game Sony PlayStation 5 chính hãng.",
+    "fullDescription": "PlayStation 5 mang đến hiệu suất đột phá với CPU AMD Ryzen và GPU RDNA 2. Hỗ trợ độ phân giải 8K, tốc độ khung hình lên đến 120fps. Ổ cứng SSD siêu nhanh giúp rút ngắn thời gian tải game. Tay cầm DualSense mang lại cảm giác rung và phản hồi xúc giác chân thật. Thiết kế hiện đại, sang trọng và đậm chất tương lai. Tích hợp Wi-Fi 7 cho kết nối cực kỳ nhanh và ổn định. Hỗ trợ công nghệ âm thanh 3D Tempest. Kho game độc quyền phong phú từ Sony Studios. Tương thích ngược với hàng trăm tựa PS4. Là lựa chọn hàng đầu cho mọi game thủ hiện đại.",
+    "image": "/Assets/image/ps5.webp",
+    "gallery": ["/Assets/image/ps5.webp"],
+    "bonus": ["Giảm 20%", "Tặng 1 tay cầm DualSense", "Bảo hành 24 tháng"],
+    "specs": {
+      "Bộ xử lý": "AMD Ryzen Zen 2 8 nhân",
+      "GPU": "RDNA 2",
+      "Lưu trữ": "SSD 825GB",
+      "Kết nối": "Wi-Fi 7, Bluetooth 5.1"
+    }
   }
 ]
+
