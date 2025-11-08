@@ -166,14 +166,48 @@ body{
     width: 180px;
     position: relative;
 }
-.menu-small-frame{
-    padding: 0px 50px 20px 10px;
+
+.menu-small-frame {
+    display: none;
     position: absolute;
+    top: 50px;
+    left: 0;
     background-color: #f9f9f9;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-
+    padding: 10px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 999;
 }
+
+
+.menu-small-frame.show {
+    display: block;
+    animation: slideDown 0.3s ease;
+}
+
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.menu-small-frame a {
+    color: #333;
+    text-decoration: none;
+}
+
+.menu-small-frame a:hover {
+    color: #e95221;
+}
+
+
 .menu-small-frame a{
     color: #333;
 }
@@ -242,5 +276,39 @@ body{
     }
     svg{
         padding: 0;
+    }
+}
+
+
+
+.search-box-mobile {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #f9f9f9;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+}
+
+.search-box-mobile input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
