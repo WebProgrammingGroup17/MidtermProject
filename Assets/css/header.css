@@ -14,9 +14,9 @@ html {
     border-radius: 10px;
     box-shadow: 0 4px 10px #000;
     background-color: #fffbfb;
-    top: 46px;
-    right: 190px;
+    top: 47px;
 }
+
 .icon2:hover + .register-login,
 .register-login:hover {
   display: block;
@@ -30,9 +30,19 @@ html {
     color: #fff;
     transition: all 0.3s ease;
 }
-.icon2{
-    position: relative;
+a{
+    text-decoration: none;
+
 }
+
+.cart3{
+    margin: 0;
+    color: #333;
+}
+.cart3:hover{
+    color: #e95221;
+}
+
 .no-margin{
     display: grid;
     grid-template-columns: 1fr 5fr;
@@ -57,10 +67,6 @@ html {
     padding-top: 0.5rem;
     padding-bottom: 3.7rem;
     gap: 10px;
-}
-.right1{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
 }
 .right1 i{
     cursor: pointer;
@@ -122,18 +128,17 @@ body{
 .right1{
     padding: 15px;
     display: flex;
-    gap: 10px;
 }
 .icon i{
     color: #e85221;
     font-size: 25px;
 }
 .icon p{
-    font-size: 12px;
+    font-size: 10px;
     
 }
 .icon{
-    width: 70px;
+    width: 60px;
     text-align: center;
 }
 .icon2{
@@ -145,7 +150,7 @@ body{
 .num{
     position: absolute;
     top: -17px;
-    right: 20px;
+    right: 13px;
 }
 .menu2{
     display: flex;
@@ -159,11 +164,30 @@ body{
     font-size: 30px;
     display: none;
     width: 180px;
+    position: relative;
+}
+.menu-small-frame{
+    padding: 0px 50px 20px 10px;
+    position: absolute;
+    background-color: #f9f9f9;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+.menu-small-frame a{
+    color: #333;
+}
+.menu-small-frame a:hover{
+    color: #e95221;
+}
+.menu-small-frame p{
+    font-size: 16px;
 }
 .menu2 a{
     text-decoration: none;
     color: #fff;
 }
+
 @media (max-width: 768px) {
   html {
     font-size: 14px; 
@@ -173,7 +197,7 @@ body{
   }
   .hamburger,.search2{
     display: block;
-    padding-top: 28px;
+    padding-top: 15px;
     cursor: pointer;
   }
   .menu{
@@ -203,7 +227,20 @@ body{
     .icon{
         padding-top: 15px;
     }
-    .icon2 i{
-        padding-left: 50px;
+    .right1{
+        padding: 0;
+    }
+    .register-login p{
+        font-size: 15px;
+        padding: 0;
+        margin: 0;
+        z-index: 1000;
+    }
+    .no-margin{
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+    }
+    svg{
+        padding: 0;
     }
 }

@@ -16,7 +16,7 @@
 
           function checkMenuWrap() {
             navItems.style.display = "flex";
-              const navWidth = navbar.scrollWidth;
+            const navWidth = navbar.scrollWidth;
             const containerWidth = container.clientWidth;
 
             if (navWidth > containerWidth) {
@@ -40,5 +40,4 @@ fetch("/Assets/component/footer.html")
   .then((res) => res.text())
   .then((data) => {
     document.getElementById("footer").innerHTML = data;
-
   });
