@@ -134,7 +134,7 @@
     <section class="best-prices">
       <h2>Giá ưu đãi</h2>
       <div class="product-grid">
-        <div class="product-card">
+        <div class="product-card" data-id="p1">
           <div class="discount">-20%</div>
           <img
             src="Assets/image/console.webp"
@@ -149,7 +149,7 @@
           </div>
         </div>
 
-        <div class="product-card">
+        <div class="product-card" data-id="p2">
           <div class="discount">-20%</div>
           <img
             src="Assets/image/baner3.webp"
@@ -164,7 +164,7 @@
           </div>
         </div>
 
-        <div class="product-card">
+        <div class="product-card" data-id="p3">
           <div class="discount">-20%</div>
           <img
             src="Assets/image/baner4.webp"
@@ -179,7 +179,7 @@
           </div>
         </div>
 
-        <div class="product-card">
+        <div class="product-card" data-id="p4">
           <div class="discount">-20%</div>
           <img
             src="Assets/image/ps5.webp"
@@ -224,7 +224,7 @@
           <img src="/Assets/image/baner4.webp" alt="Camera Banner" />
           <div class="banner-text">
             <p class="top">Top Handle Brands</p>
-            <h2>Tất cả sản phẩm<br />Dưới $50</h2>
+            <h2>Tất cả sản phẩm<br />Dưới 12.750.000đ</h2>
             <button class="shop-btn">Mua ngay</button>
           </div>
         </div>
@@ -280,6 +280,25 @@
     <div id="footer"></div>
     <script src="/Assets/js/main.js"></script>
     <script src="/Assets/js/home.js"></script>
+
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const productCards = document.querySelectorAll(".product-card");
+
+  productCards.forEach(card => {
+    card.addEventListener("click", () => {
+      const productId = card.getAttribute("data-id");
+      // Kiểm tra id và chuyển trang
+      if (productId) {
+        console.log("Đang mở sản phẩm:", productId);
+        window.location.href = "Assets/component/productDetails.html?id=" + productId;
+      } else {
+        console.error("Thẻ product-card không có data-id");
+      }
+    });
+  });
+});
+</script>
+
   </body>
 </html>
-
