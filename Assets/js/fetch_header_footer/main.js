@@ -1,43 +1,44 @@
-// /* 
-//     logic dùng chung
-// */
-// // Load header
-//       fetch("/Assets/component/header.html")
-//         .then((res) => res.text())
-//         .then((data) => {
-//           document.getElementById("header").innerHTML = data;
+/* 
+    logic dùng chung
+*/
+// Load header
 
-//           // --- ⬇⬇ Chỉ chạy script sau khi header được load xong ⬇⬇ ---
-//           const header = document.getElementById("header");
-//           const container = header.querySelector(".container");
-//           const navbar = header.querySelector(".navbar");
-//           const navItems = header.querySelector(".nav-items");
-//           const hamburger = header.querySelector(".hamburger");
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector(".header");
+  const menuBtn = header.querySelector("#menuBTN");
+  const menuSmall = header.querySelector("#menu-small");
+  const searchIconMobile = header.querySelector(".hamburger .bi-search");
+  const searchBoxMobile = header.querySelector(".search-box-mobile");
 
-//           function checkMenuWrap() {
-//             navItems.style.display = "flex";
-//             const navWidth = navbar.scrollWidth;
-//             const containerWidth = container.clientWidth;
+  function closeAll() {
+    if (menuSmall) menuSmall.style.display = "none";
+    if (searchBoxMobile) searchBoxMobile.style.display = "none";
+  }
 
-//             if (navWidth > containerWidth) {
-//               header.classList.add("show-hamburger", "hide-menu");
-//             } else {
-//               header.classList.remove("show-hamburger", "hide-menu");
-//               navItems.classList.remove("show");
-//             }
-//             navItems.style.display = "";
-//           }
+  if (menuBtn && menuSmall) {
+    menuBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (searchBoxMobile) searchBoxMobile.style.display = "none";
+      menuSmall.style.display =
+        menuSmall.style.display === "block" ? "none" : "block";
+    });
+  }
 
-//           window.addEventListener("resize", checkMenuWrap);
-//           window.addEventListener("load", checkMenuWrap);
+  if (searchIconMobile && searchBoxMobile) {
+    searchIconMobile.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (menuSmall) menuSmall.style.display = "none";
+      searchBoxMobile.style.display =
+        searchBoxMobile.style.display === "block" ? "none" : "block";
+      searchBoxMobile.querySelector("input")?.focus();
+    });
+    searchBoxMobile.addEventListener("click", (e) => e.stopPropagation());
+  }
 
-//           hamburger.addEventListener("click", () => {
-//             navItems.classList.toggle("show");
-//           });
-//         });
-// // Load footer
-// fetch("/Assets/component/footer.html")
-//   .then((res) => res.text())
-//   .then((data) => {
-//     document.getElementById("footer").innerHTML = data;
-//   });
+  document.addEventListener("click", closeAll);
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) closeAll();
+  });
+});
+
