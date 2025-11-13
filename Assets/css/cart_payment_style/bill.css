@@ -1,0 +1,144 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+.invoice-container {
+    background: white;
+    width: 800px;
+    margin: 50px auto;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #000;
+}
+
+.customer-info {
+    background: #f9f9f9;
+    padding: 15px 20px;
+    border-left: 5px solid #e95221;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.customer-info h2 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 18px;
+}
+
+.info-display p {
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+.info-display strong {
+    width: 150px;
+    display: inline-block;
+    color: #000;
+}
+
+.product-list h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+table th, table td {
+    border: 1px solid #e95221;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background: #e95221;
+    color: #fff;
+}
+
+.summary {
+    border-top: 2px solid #e95221;
+    padding-top: 10px;
+    margin-bottom: 25px;
+}
+
+.summary-row, .summary-total {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.summary-total {
+    font-weight: bold;
+    font-size: 18px;
+    color: #000;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+button {
+    padding: 10px 25px;
+    font-size: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-primary {
+    background-color: #e95221;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #d3471f;
+}
+
+.btn-secondary {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background-color: #e95221;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .invoice-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    table th, table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+
+
