@@ -10,14 +10,14 @@
 
 .order-detail-container h2 {
   text-align: center;
-  color: #e85221;
+  color: #E95221;
   margin-bottom: 15px;
 }
 
 .order-detail-container h3 {
   color: #333;
   margin-top: 25px;
-  border-left: 5px solid #e85221;
+  border-left: 5px solid #E95221;
   padding-left: 10px;
 }
 
@@ -58,7 +58,7 @@
 }
 
 .order-products th {
-  background-color: #e85221;
+  background-color: #E95221;
   color: white;
 }
 
@@ -68,7 +68,7 @@
 }
 
 .order-summary .total {
-  color: #e85221;
+  color: #E95221;
   font-size: 18px;
   font-weight: bold;
 }
@@ -77,7 +77,7 @@
   display: inline-block;
   margin-top: 25px;
   padding: 10px 15px;
-  background-color: #e85221;
+  background-color: #E95221;
   color: white;
   border-radius: 6px;
   text-decoration: none;
@@ -85,7 +85,7 @@
 }
 
 .back-btn:hover {
-  background-color: #cc421b;
+  pointer-events: cusor;
 }
 
 .order-info i,
@@ -95,7 +95,7 @@
 .order-info .fa-solid,
 .order-info .fa-regular {
   margin-right: 10px;
-  color: #E95221 !important; /* ép màu cam */
+  color: #E95221 !important;
   font-size: 18px;
 }
 
