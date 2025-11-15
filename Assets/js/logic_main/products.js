@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     item.addEventListener("click", () => {
       const id = item.getAttribute("data-id");
       // Chuyển sang trang chi tiết, mang theo id qua URL
-      window.location.href = `/Assets/component/productDetails.html?id=${id}`;
+      window.location.href = `../Assets/component/productDetails.html?id=${id}`;
     });
   });
 });

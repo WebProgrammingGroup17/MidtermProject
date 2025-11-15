@@ -16,16 +16,30 @@ html {
     background-color: #fffbfb;
     top: 47px;
 }
-
-.icon2:hover + .register-login,
-.register-login:hover {
-  display: block;
+.no-margin2{
+    padding: 7px;
+    cursor: pointer;
 }
-.a-same-nodecoration{
+
+.personal_logout{
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #000;
+    top: 47px;
+    background-color: #fffbfb;
+}
+.personal_logout p{
+    margin: 0;
+    padding: 5px;
+}
+
+
+.a-same-nodecoration, .a-same-nodecoration1{
     text-decoration: none;
     color: #333;
 }
-.no-margin:hover{
+.no-margin:hover, .no-margin1:hover{
     background-color: #e95221;
     color: #fff;
     transition: all 0.3s ease;

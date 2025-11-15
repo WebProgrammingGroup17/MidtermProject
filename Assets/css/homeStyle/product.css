@@ -336,6 +336,7 @@ main{
     transition: transform 0.3s ease;
     transform: translateX(100%);
 }
+
 #filter-panel.active {
     display: block;
     transform: translateX(0);

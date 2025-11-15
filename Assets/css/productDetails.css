@@ -101,6 +101,10 @@ ul {
     padding-left: 0;
 }
 
+ul li::before {
+    content: "✔ ";
+    color: #E95221;
+}
 
 /* chia bố cục 3 hàng*/
 .quantity-row,
@@ -214,8 +218,8 @@ ul {
 }
 
 .specs-section th {
-    color: #fff;
-    background-color: #E95221;
+    background-color: #f7f7f7;
+    color: #000;
 }
 
 

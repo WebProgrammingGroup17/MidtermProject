@@ -1,3 +1,4 @@
+//localStorage.clear();
 const images = document.querySelectorAll('.slides img');
 const dots = document.querySelectorAll('.dot');
 let index = 0;
@@ -48,3 +49,6 @@ function resetTimer() {
 }
 
 startTimer();
+
+
+

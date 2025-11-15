@@ -12,6 +12,9 @@
   cursor: pointer;
 }
 
+
+
+
 .slides img.active {
   display: block;
 }
