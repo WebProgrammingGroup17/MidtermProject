@@ -28,11 +28,14 @@
               <i class="bi bi-search" style="font-size: 26px"></i>
             </div>
             <div class="menu-small-frame" style="display: none;" id="menu-small">
-              <div><a href=""><p>Trang Chủ</p></a></div>
-              <div><a href=""><p>Sản Phẩm</p></a></div>
-              <div><a href=""><p>Giới Thiệu</p></a></div>
-              <div><a href=""><p>Liên Hệ</p></a></div>
+                <div><a href="../../../index.html"><p>Trang Chủ</p></a></div>
+                <div><a href="../../../products.html"><p>Sản Phẩm</p></a></div>
+                <div><a href="../../../about.html"><p>Giới Thiệu</p></a></div>
+                <div><a href="../../../contact.html"><p>Liên Hệ</p></a></div>
             </div>
+              <div class="search-box-mobile" style="display: none;" id="search-box">
+                  <input type="text" placeholder="Tìm kiếm sản phẩm..." />
+              </div>
             <div class="logo">
               <a href="../../../index.html"
                 ><img title="logo"
@@ -60,13 +63,13 @@
 
 
             <div class="right1">
-              <div class="icon icon2">
+              <div class="icon icon2" id="icon3">
                 <i class="bi bi-person-circle"></i>
                 <p style="margin: 0">TÀI KHOẢN</p>
               </div>
 
               
-              <div class="register-login">
+              <div class="register-login" id="loginForm">
             <a href="../login_logout/login.html" class="a-same-nodecoration"><div class="no-margin">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -104,13 +107,21 @@
               </svg><p>Đăng ký</p>
             </div></a>
           </div>
+                <div class="personal_logout" id="personal_logout">
+                    <a href="./Order.html" class="a-same-nodecoration1"><div class="no-margin1">
+                        <p>Trang cá nhân</p>
+                    </div></a>
+                    <div class="no-margin1 no-margin2">
+                        <span id="logoutbtn" class="logoutbtn">Đăng xuất</span>
+                    </div>
+                </div>
 
 
               <a href="../cart_payment/cart.html"><div class="icon">
                 <div class="cart">
                   <i class="bi bi-cart2" title="cart"></i>
                   <div class="num">
-                    <p
+                    <p id="cart_num"
                       style="
                         border-radius: 8px;
                         padding: 2px;
@@ -161,7 +172,7 @@
             <p class="title title1">Thông tin nhận hàng</p>
             <div class="name_infor">
               <p class="p1 p-same">Họ và tên người nhận hàng</p>
-              <p class="p2">phamhuudatdepzai123</p>
+              <p class="p2">Khu phố 6, phường Linh Trung, Thủ Đức</p>
             </div>
             <div class="name_infor">
               <p class="p1 p-same">Số Điện Thoại</p>
@@ -174,7 +185,7 @@
             </div>
             <div class="name_infor">
               <p class="p1 p-same">Email</p>
-              <p class="p2">abc@gmail.com</p>
+              <p class="p2">vana@gmail.com</p>
             </div>
             <div class="same-style">
               <div class="parent"><input class="input11" type="text"/>
@@ -235,17 +246,17 @@
             </div>
           </div>
           <div class="product1">
-            <p class="title title3">Đơn hàng (4 sản phẩm)</p>
+            <p class="title title3">Đơn hàng (5 sản phẩm)</p>
 
             <div class="flex_infor_product padding-same same">
               <div class="part1">
                 <div class="parent2"><img src="/Assets/image/newps4.png" alt="" />
-                    <div class="child2"><p class="number">2</p></div>
+                    <div class="child2"><p class="number">3</p></div>
                 </div>    
               </div>
-              <div><p class="title-item">Giày cầu lông Yonex 65z4</p></div> 
+              <div><p class="title-item">Play Station 4 </p></div>
               <div class="part3">
-                <p>1.978.000đ</p>
+                <p>30.000.000đ</p>
               </div>
             </div>
 
@@ -255,9 +266,9 @@
                     <div class="child2"><p class="number">2</p></div>
                 </div>    
               </div>
-              <div><p class="title-item">Giày cầu lông Yonex 65z4</p></div> 
+              <div><p class="title-item">Play Station 4</p></div>
               <div class="part3">
-                <p>1.978.000đ</p>
+                <p>12.000.000đ</p>
               </div>
             </div>
 
@@ -270,11 +281,11 @@
 
             <div class="infor2 same grid-same">
                 <div class="total-price"><p>Tổng cộng: </p></div>
-                <div><p style="font-size: 20px;">3.254.000đ</p></div>
+                <div><p style="font-size: 20px;">42.000.000</p></div>
             </div>
             <div class="update_and_order same grid-same">
                 <div><button class="same-btn btn-green">Sửa giỏ hàng</button></div>
-                <div><button class="same-btn btn-red">Đặt hàng</button></div>
+                <a href="../cart_payment/bill.html"><div><button class="same-btn btn-red"  style="cursor: pointer">Đặt hàng</button></div></a>
             </div>
           </div>
         </div>
@@ -341,5 +352,8 @@ input type="email" placeholder="Nhập Email" />
         </div>
       </div>
     </footer>
+    <script src="/Assets/js/fetch_header_footer/main.js"></script>
+    <script src="../../js/logic_login_logout/login_logout.js"></script>
+    <script src="../../js/display_num_cart/num_cart.js"></script>
   </body>
 </html>

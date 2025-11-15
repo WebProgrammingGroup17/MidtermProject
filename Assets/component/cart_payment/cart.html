@@ -28,11 +28,14 @@
               <i class="bi bi-search" style="font-size: 26px"></i>
             </div>
             <div class="menu-small-frame" style="display: none;" id="menu-small">
-              <div><a href=""><p>Trang Chủ</p></a></div>
-              <div><a href=""><p>Sản Phẩm</p></a></div>
-              <div><a href=""><p>Giới Thiệu</p></a></div>
-              <div><a href=""><p>Liên Hệ</p></a></div>
+                <div><a href="../../../index.html"><p>Trang Chủ</p></a></div>
+                <div><a href="../../../products.html"><p>Sản Phẩm</p></a></div>
+                <div><a href="../../../about.html"><p>Giới Thiệu</p></a></div>
+                <div><a href="../../../contact.html"><p>Liên Hệ</p></a></div>
             </div>
+              <div class="search-box-mobile" style="display: none;" id="search-box">
+                  <input type="text" placeholder="Tìm kiếm sản phẩm..." />
+              </div>
             <div class="logo">
               <a href="../../../index.html"
                 ><img title="logo"
@@ -60,13 +63,13 @@
 
 
             <div class="right1">
-              <div class="icon icon2">
+              <div class="icon icon2" id="icon3">
                 <i class="bi bi-person-circle"></i>
                 <p style="margin: 0">TÀI KHOẢN</p>
               </div>
 
               
-              <div class="register-login">
+              <div class="register-login" id="loginForm">
             <a href="../login_logout/login.html" class="a-same-nodecoration"><div class="no-margin">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -105,12 +108,21 @@
             </div></a>
           </div>
 
+                <div class="personal_logout" id="personal_logout">
+                    <a href="./Order.html" class="a-same-nodecoration1"><div class="no-margin1">
+                        <p>Trang cá nhân</p>
+                    </div></a>
+                    <div class="no-margin1 no-margin2">
+                        <span id="logoutbtn" class="logoutbtn">Đăng xuất</span>
+                    </div>
+                </div>
 
-              <a href="/Assets/component/cart_payment/cart.html"><div class="icon">
+
+              <a href="./cart.html"><div class="icon" id="cart_icon">
                 <div class="cart">
                   <i class="bi bi-cart2" title="cart"></i>
                   <div class="num">
-                    <p
+                    <p id="cart_num"
                       style="
                         border-radius: 8px;
                         padding: 2px;
@@ -157,33 +169,53 @@
 
 
 
-    <div class="container">
+    <div class="container" id="cart-item">
       <div class="title">
-        <p>Giỏ hàng của bạn</p>
+        <p>Giỏ hàng của bạn:  <span id="for_you"></span></p>
       </div>
-      <div>
-        <div class="cart2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="60"
-            height="60"
-            fill="currentColor"
-            class="bi bi-cart-x"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M7.354 5.646a.5.5 0 1 0-.708.708L7.793 7.5 6.646 8.646a.5.5 0 1 0 .708.708L8.5 8.207l1.146 1.147a.5.5 0 0 0 .708-.708L9.207 7.5l1.147-1.146a.5.5 0 0 0-.708-.708L8.5 6.793z"
-            />
-            <path
-              d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
-            />
-          </svg>
-        </div>
-        <div class="description">
-            <p>Không có sản phẩm nào trong giỏ hàng của bạn.</p>
-        </div>
-      </div>
+
+
+        <table class="cart-table">
+            <tbody id="cart-items"></tbody>
+
+            <tr class="summary-row">
+                <td colspan="3" style="border-bottom: none;">
+                    TỔNG TIỀN:
+                </td>
+                <td class="total-amount" style="border-bottom: none;">
+                    <span id="total-price"></span>
+                </td>
+            </tr>
+        </table>
+
+
+        <a href=""><button class="checkout-btn">
+            ĐẶT HÀNG
+        </button></a>
     </div>
+<!--      <div>-->
+<!--        <div class="cart2">-->
+<!--          <svg-->
+<!--            xmlns="http://www.w3.org/2000/svg"-->
+<!--            width="60"-->
+<!--            height="60"-->
+<!--            fill="currentColor"-->
+<!--            class="bi bi-cart-x"-->
+<!--            viewBox="0 0 16 16"-->
+<!--          >-->
+<!--            <path-->
+<!--              d="M7.354 5.646a.5.5 0 1 0-.708.708L7.793 7.5 6.646 8.646a.5.5 0 1 0 .708.708L8.5 8.207l1.146 1.147a.5.5 0 0 0 .708-.708L9.207 7.5l1.147-1.146a.5.5 0 0 0-.708-.708L8.5 6.793z"-->
+<!--            />-->
+<!--            <path-->
+<!--              d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"-->
+<!--            />-->
+<!--          </svg>-->
+<!--        </div>-->
+<!--        <div class="description">-->
+<!--            <p>Không có sản phẩm nào trong giỏ hàng của bạn.</p>-->
+<!--        </div>-->
+<!--      </div>-->
+
     <!-- <div id="footer"></div>
     <script src="/Assets/js/main.js"></script> -->
 
@@ -246,5 +278,33 @@
         </div>
       </div>
     </footer>
+    <script src="/Assets/js/fetch_header_footer/main.js"></script>
+    <script src="../../js/logic_login_logout/login_logout.js"></script>
+    <script src="../../js/logic_cart/cart.js"></script>
+<!--    <script>-->
+<!--        function formatToNumber(priceString) {-->
+<!--            // "25.000.000đ" → 25000000-->
+<!--            return Number(priceString.replace(/\./g, "").replace("đ", ""));-->
+<!--        }-->
+
+<!--        function formatToMoney(num) {-->
+<!--            // 25000000 → "25.000.000đ"-->
+<!--            return num.toLocaleString("vi-VN") + "đ";-->
+<!--        }-->
+
+<!--        function updateTotalPrice() {-->
+<!--            let total = 0;-->
+
+<!--            userCart.forEach(item => {-->
+<!--                const price = formatToNumber(item.price);-->
+<!--                total += price * item.quantity;-->
+<!--            });-->
+
+<!--            document.getElementById("total-price").textContent = formatToMoney(total);-->
+<!--        }-->
+<!--        cartBody.innerHTML = html;-->
+<!--        updateTotalPrice();-->
+<!--        -->
+<!--    </script>-->
   </body>
 </html>

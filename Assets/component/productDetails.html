@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chi tiết sản phẩm</title>
-    <link rel="stylesheet" href="/Assets/css/productDetails.css" />
-    <link rel="stylesheet" href="/Assets/css/recycleFilecss/header.css" />
-    <link rel="stylesheet" href="/Assets/css/recycleFilecss/footer.css" />
+    <link rel="stylesheet" href="../css/productDetails.css" />
+    <link rel="stylesheet" href="../css/recycleFilecss/header.css" />
+    <link rel="stylesheet" href="../css/recycleFilecss/footer.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -15,6 +15,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
     />
+
   </head>
   <body>
     <!-- <div id="header"></div> -->
@@ -28,19 +29,14 @@
               <i class="bi bi-search" style="font-size: 26px"></i>
             </div>
             <div class="menu-small-frame" style="display: none" id="menu-small">
-              <div>
-                <a href=""><p>Trang Chủ</p></a>
-              </div>
-              <div>
-                <a href=""><p>Sản Phẩm</p></a>
-              </div>
-              <div>
-                <a href=""><p>Giới Thiệu</p></a>
-              </div>
-              <div>
-                <a href=""><p>Liên Hệ</p></a>
-              </div>
+                <div><a href="../../index.html"><p>Trang Chủ</p></a></div>
+                <div><a href="../../products.html"><p>Sản Phẩm</p></a></div>
+                <div><a href="../../about.html"><p>Giới Thiệu</p></a></div>
+                <div><a href="../../contact.html"><p>Liên Hệ</p></a></div>
             </div>
+              <div class="search-box-mobile" style="display: none;" id="search-box">
+                  <input type="text" placeholder="Tìm kiếm sản phẩm..." />
+              </div>
             <div class="logo">
               <a href="../../index.html"
                 ><img
@@ -70,12 +66,12 @@
             </div>
 
             <div class="right1">
-              <div class="icon icon2">
+              <div class="icon icon2" id="icon3">
                 <i class="bi bi-person-circle"></i>
                 <p style="margin: 0">TÀI KHOẢN</p>
               </div>
 
-              <div class="register-login">
+              <div class="register-login" id="loginForm">
                 <a
                   href="../component/login_logout/login.html"
                   class="a-same-nodecoration"
@@ -124,13 +120,21 @@
                   </div></a
                 >
               </div>
+                <div class="personal_logout" id="personal_logout">
+                    <a href="../component/cart_payment/Order.html" class="a-same-nodecoration1"><div class="no-margin1">
+                        <p>Trang cá nhân</p>
+                    </div></a>
+                    <div class="no-margin1 no-margin2">
+                        <span id="logoutbtn" class="logoutbtn">Đăng xuất</span>
+                    </div>
+                </div>
 
               <a href="../component/cart_payment/cart.html"
                 ><div class="icon">
                   <div class="cart">
                     <i class="bi bi-cart2" title="cart"></i>
                     <div class="num">
-                      <p
+                      <p id="cart_num"
                         style="
                           border-radius: 8px;
                           padding: 2px;
@@ -172,77 +176,69 @@
     </header>
 
     <main>
-      <!-- Chi tiết sản phẩm -->
-      <section id="product-details" class="product-details">
-        <div class="product-container">
-          <div class="left">
-            <img id="product-image" alt="" />
-            <div id="product-gallery" class="gallery"></div>
-          </div>
+        <section id="product-details" class="product-details hidden">
+            <div class="product-container">
+                <div class="left">
+                    <img id="product-image" alt="" />
+                    <div id="product-gallery" class="gallery"></div>
+                </div>
 
-          <div class="right">
-            <h2 id="product-name"></h2>
-            <p><strong>Mã sản phẩm:</strong> <span id="product-id"></span></p>
-            <p>
-              <strong>Danh mục:</strong> <span id="product-category"></span>
-            </p>
-            <p class="price" id="product-price"></p>
-            <p>
-              <strong>Tình trạng:</strong>
-              <span style="color: red">Còn hàng</span>
-            </p>
+                <div class="right">
+                    <h2 id="product-name"></h2>
+                    <p><strong>Mã sản phẩm:</strong> <span id="product-id"></span></p>
+                    <p><strong>Danh mục:</strong> <span id="product-category"></span></p>
+                    <p class="price" id="product-price"></p>
+                    <p><strong>Tình trạng:</strong> <span style="color: red">Còn hàng</span></p>
 
-            <!-- Khung ưu đãi + mô tả ngắn -->
-            <div class="product-info-box">
-              <div class="product-offer">
-                <h3>Ưu đãi</h3>
-                <ul id="product-bonus"></ul>
-              </div>
-              <div class="product-description" id="product-description">
-                <h3>Mô tả sản phẩm</h3>
-              </div>
+                    <div class="product-info-box">
+                        <div class="product-offer">
+                            <h3>Ưu đãi</h3>
+                            <ul id="product-bonus"></ul>
+                        </div>
+
+                        <div class="product-description">
+                            <h3>Mô tả sản phẩm</h3>
+                            <p id="product-description"></p>
+                        </div>
+                    </div>
+
+                    <div class="quantity-row">
+                        <div class="quantity-control">
+                            <button id="decrease">−</button>
+                            <span id="quantity">1</span>
+                            <button id="increase">+</button>
+                        </div>
+                    </div>
+
+                    <div class="action-row">
+                        <button id="cart-btn">Thêm vào giỏ hàng</button>
+                        <button id="buy-btn">Mua ngay</button>
+                    </div>
+
+                    <div class="back-row">
+                        <button id="back-btn">← Quay lại</button>
+                    </div>
+                </div>
             </div>
 
-            <!-- Hàng 1: tăng/giảm số lượng -->
-            <div class="quantity-row">
-              <div class="quantity-control">
-                <button id="decrease">−</button>
-                <span id="quantity">1</span>
-                <button id="increase">+</button>
-              </div>
-            </div>
+            <!-- Mô tả chi tiết -->
+            <section class="product-detail-info">
+                <div class="description-section">
+                    <h3>Mô tả chi tiết</h3>
+                    <p id="product-full-description"></p>
+                </div>
 
-            <!-- Hàng 2: nút thêm giỏ + mua ngay -->
-            <div class="action-row">
-              <button id="cart-btn">Thêm vào giỏ hàng</button>
-              <button id="buy-btn">Mua ngay</button>
-            </div>
-
-            <!-- Hàng 3: nút quay lại -->
-            <div class="back-row">
-              <button id="back-btn">← Quay lại</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Phần mô tả chi tiết & thông số kỹ thuật -->
-        <section class="product-detail-info">
-          <div class="description-section">
-            <h3>Mô tả chi tiết</h3>
-            <p id="product-full-description"></p>
-          </div>
-
-          <div class="specs-section">
-            <h3>Thông số kỹ thuật</h3>
-            <table id="product-specs">
-              <tr>
-                <th>Thuộc tính</th>
-                <th>Giá trị</th>
-              </tr>
-            </table>
-          </div>
+                <div class="specs-section">
+                    <h3>Thông số kỹ thuật</h3>
+                    <table id="product-specs">
+                        <tr>
+                            <th>Thuộc tính</th>
+                            <th>Giá trị</th>
+                        </tr>
+                    </table>
+                </div>
+            </section>
         </section>
-      </section>
     </main>
     <!-- <div id="footer"></div> -->
 
@@ -305,60 +301,64 @@
       </div>
     </footer>
 
-    <!-- <script src="/Assets/js/main.js"></script> -->
+<!--    <script src="../js/product_details/productDetails.js"></script>-->
+<!--    <script src="../js/fetch_header_footer/main.js"></script>-->
+<!--    <script src="../js/logic_login_logout/login_logout.js"></script>-->
+<!--    <script src="../js/display_num_cart/num_cart.js"></script>-->
+
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const params = new URLSearchParams(window.location.search);
-        let productId = params.get("id"); 
+        document.addEventListener("DOMContentLoaded", () => {
+            const params = new URLSearchParams(window.location.search);
+            let productId = params.get("data-id");
 
-        fetch("/Database/data_products/productDetails.json")
-          .then((res) => res.json())
-          .then((data) => {
-            // Nếu không có id -> chọn sản phẩm đầu tiên trong JSON
-            if (!productId) {
-              console.warn("Không có id trong URL, tự động hiển thị sản phẩm đầu tiên.");
-              productId = data[0].id;
-            }
+            // Nếu không có ID -> lấy sản phẩm đầu tiên
+            if (!productId) productId = productData[0].id;
 
-            const product = data.find((p) => p.id === productId);
+            const product = productData.find((p) => p.id === productId);
+
             if (!product) {
-              document.body.innerHTML = `<h2 style="color:red;text-align:center;margin-top:50px;">Không tìm thấy sản phẩm!</h2>`;
-              return;
+                document.body.innerHTML =
+                    '<h2 style="color:red;text-align:center;margin-top:50px;">Không tìm thấy sản phẩm!</h2>';
+                return;
             }
 
-            // Hiển thị dữ liệu sản phẩm
+            // Gán dữ liệu
             document.getElementById("product-name").textContent = product.name;
             document.getElementById("product-id").textContent = product.id;
             document.getElementById("product-category").textContent = product.category;
             document.getElementById("product-price").textContent =
-              product.price.toLocaleString("vi-VN") + " ₫";
-            document.getElementById("product-description").innerHTML += `<p>${product.description}</p>`;
+                product.price.toLocaleString("vi-VN") + " ₫";
+            document.getElementById("product-description").textContent = product.description;
             document.getElementById("product-full-description").textContent =
-              product.fullDescription;
+                product.fullDescription;
 
             // Ảnh chính
             document.getElementById("product-image").src = product.image;
 
-            // Gallery ảnh nhỏ
-            const gallery = document.getElementById("product-gallery");
-            gallery.innerHTML = product.gallery.map((img) => `<img src="${img}" alt="">`).join("");
+            // Gallery
+            document.getElementById("product-gallery").innerHTML = product.gallery
+                .map((img) => `<img src="${img}" alt="">`)
+                .join("");
 
             // Ưu đãi
-            const bonusList = document.getElementById("product-bonus");
-            bonusList.innerHTML = product.bonus.map((b) => `<li>${b}</li>`).join("");
+            document.getElementById("product-bonus").innerHTML = product.bonus
+                .map((b) => `<li>${b}</li>`)
+                .join("");
 
             // Thông số kỹ thuật
-            const specsTable = document.getElementById("product-specs");
+            const specs = document.getElementById("product-specs");
             for (let key in product.specs) {
-              const row = document.createElement("tr");
-              row.innerHTML = `<td>${key}</td><td>${product.specs[key]}</td>`;
-              specsTable.appendChild(row);
+                const row = document.createElement("tr");
+                row.innerHTML = `<td>${key}</td><td>${product.specs[key]}</td>`;
+                specs.appendChild(row);
             }
 
             document.querySelector(".product-details").classList.remove("hidden");
-          })
-          .catch((err) => console.error("Lỗi khi tải JSON:", err));
-      });
-    </script>  
+        });
+    </script>
+    <script src="../js/product_details/productDetails.js"></script>
+    <script src="../js/fetch_header_footer/main.js"></script>
+    <script src="../js/logic_login_logout/login_logout.js"></script>
+    <script src="../js/display_num_cart/num_cart.js"></script>
   </body>
 </html>

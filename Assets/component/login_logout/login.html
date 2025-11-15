@@ -28,11 +28,14 @@
               <i class="bi bi-search" style="font-size: 26px"></i>
             </div>
             <div class="menu-small-frame" style="display: none;" id="menu-small">
-              <div><a href=""><p>Trang Chủ</p></a></div>
-              <div><a href=""><p>Sản Phẩm</p></a></div>
-              <div><a href=""><p>Giới Thiệu</p></a></div>
-              <div><a href=""><p>Liên Hệ</p></a></div>
+                <div><a href="../../../index.html"><p>Trang Chủ</p></a></div>
+                <div><a href="../../../products.html"><p>Sản Phẩm</p></a></div>
+                <div><a href="../../../about.html"><p>Giới Thiệu</p></a></div>
+                <div><a href="../../../contact.html"><p>Liên Hệ</p></a></div>
             </div>
+              <div class="search-box-mobile" style="display: none;" id="search-box">
+                  <input type="text" placeholder="Tìm kiếm sản phẩm..." />
+              </div>
             <div class="logo">
               <a href="../../../index.html"
                 ><img title="logo"
@@ -60,13 +63,13 @@
 
 
             <div class="right1">
-              <div class="icon icon2">
+              <div class="icon icon2" id="icon3">
                 <i class="bi bi-person-circle"></i>
                 <p style="margin: 0">TÀI KHOẢN</p>
               </div>
 
               
-              <div class="register-login">
+              <div class="register-login" id="loginForm">
             <a href="./login.html" class="a-same-nodecoration"><div class="no-margin">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -105,12 +108,21 @@
             </div></a>
           </div>
 
+                <div class="personal_logout" id="personal_logout">
+                    <a href="../cart_payment/Order.html" class="a-same-nodecoration1"><div class="no-margin1">
+                        <p>Trang cá nhân</p>
+                    </div></a>
+                    <div class="no-margin1 no-margin2">
+                        <span id="logoutbtn" class="logoutbtn">Đăng xuất</span>
+                    </div>
+                </div>
+
 
               <a href="../cart_payment/cart.html"><div class="icon">
                 <div class="cart">
                   <i class="bi bi-cart2" title="cart"></i>
                   <div class="num">
-                    <p
+                    <p id="cart_num"
                       style="
                         border-radius: 8px;
                         padding: 2px;
@@ -156,12 +168,13 @@
 
 
 
-    <form action="" class="form-login">
+    <form action="" class="form-login" id="loginForm2">
         <div class="container1">
         <h2 class="title">ĐĂNG NHẬP</h2>
-        <input class="input" type="text" placeholder="Email/Số ĐT"><br>
-        <input class="input" type="text" placeholder="Mật Khẩu"><br>
-        <button class="button">ĐĂNG NHẬP</button>
+        <input class="input" type="text" id="username" placeholder="Email/Số ĐT"><br>
+        <input class="input" type="password" id="password" placeholder="Mật Khẩu"><br>
+        <button class="button" type="submit">ĐĂNG NHẬP</button>
+            <p id="message"></p>
         <a href="">Quên mật khẩu</a>
         <a href="" class="link1">Đăng ký tại đây</a>
         </div>
@@ -226,6 +239,9 @@
         </div>
       </div>
     </footer>
+    <script src="/Assets/js/fetch_header_footer/main.js"></script>
+    <script src="../../js/logic_login_logout/login_logout.js"></script>
+    <script src="../../js/display_num_cart/num_cart.js"></script>
     <!-- <div id="footer"></div>
     <script src="/Assets/js/main.js"></script> -->
 </body>
