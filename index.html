@@ -31,10 +31,10 @@
               <i class="bi bi-search" style="font-size: 26px"></i>
             </div>
             <div class="menu-small-frame" style="display: none;" id="menu-small">
-              <div><a href=""><p>Trang Chủ</p></a></div>
-              <div><a href=""><p>Sản Phẩm</p></a></div>
-              <div><a href=""><p>Giới Thiệu</p></a></div>
-              <div><a href=""><p>Liên Hệ</p></a></div>
+              <div><a href="index.html"><p>Trang Chủ</p></a></div>
+              <div><a href="products.html"><p>Sản Phẩm</p></a></div>
+              <div><a href="about.html"><p>Giới Thiệu</p></a></div>
+              <div><a href="contact.html"><p>Liên Hệ</p></a></div>
             </div>
                           <!-- them vao day -->
             <div class="search-box-mobile" style="display: none;" id="search-box">
@@ -68,13 +68,13 @@
 
 
             <div class="right1">
-              <div class="icon icon2">
+              <div class="icon icon2" id="icon3">
                 <i class="bi bi-person-circle"></i>
                 <p style="margin: 0">TÀI KHOẢN</p>
               </div>
 
               
-              <div class="register-login">
+              <div class="register-login" id="loginForm">
             <a href="./Assets/component/login_logout/login.html" class="a-same-nodecoration"><div class="no-margin">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -114,11 +114,20 @@
           </div>
 
 
+                <div class="personal_logout" id="personal_logout">
+                    <a href="./Assets/component/cart_payment/Order.html" class="a-same-nodecoration1"><div class="no-margin1">
+                        <p>Trang cá nhân</p>
+                    </div></a>
+                    <div class="no-margin1 no-margin2">
+                        <span class="logoutbtn" id="logoutbtn">Đăng xuất</span>
+                    </div>
+                </div>
+
               <a href="./Assets/component/cart_payment/cart.html"><div class="icon">
                 <div class="cart">
                   <i class="bi bi-cart2" title="cart"></i>
                   <div class="num">
-                    <p
+                    <p id="cart_num"
                       style="
                         border-radius: 8px;
                         padding: 2px;
@@ -498,9 +507,12 @@
       </div>
     </footer>
 
-
+    <script src="Assets/js/logic_login_logout/login_logout.js"></script>
+    <script src="./Assets/js/logic_cart/cart.js"></script>
+    <script src="./Assets/js/display_num_cart/num_cart.js"></script>
     <script src="/Assets/js/fetch_header_footer/main.js"></script>
     <!-- <script src="/Assets/js/home.js"></script> -->
  
   </body>
 </html>
+
