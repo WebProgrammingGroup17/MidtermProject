@@ -16,10 +16,6 @@ html {
     background-color: #fffbfb;
     top: 47px;
 }
-.right1:hover .register-login {
-    display: block;
-}
-
 .no-margin2{
     padding: 7px;
     cursor: pointer;
@@ -32,6 +28,9 @@ html {
     box-shadow: 0 4px 10px #000;
     top: 47px;
     background-color: #fffbfb;
+}
+.right1:hover .personal_logout {
+    display: block;
 }
 .personal_logout p{
     margin: 0;
