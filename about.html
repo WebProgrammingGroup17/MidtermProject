@@ -31,11 +31,14 @@
               <i class="bi bi-search" style="font-size: 26px"></i>
             </div>
             <div class="menu-small-frame" style="display: none;" id="menu-small">
-              <div><a href=""><p>Trang Chủ</p></a></div>
-              <div><a href=""><p>Sản Phẩm</p></a></div>
-              <div><a href=""><p>Giới Thiệu</p></a></div>
-              <div><a href=""><p>Liên Hệ</p></a></div>
+                <div><a href="index.html"><p>Trang Chủ</p></a></div>
+                <div><a href="products.html"><p>Sản Phẩm</p></a></div>
+                <div><a href="about.html"><p>Giới Thiệu</p></a></div>
+                <div><a href="contact.html"><p>Liên Hệ</p></a></div>
             </div>
+                <div class="search-box-mobile" style="display: none;" id="search-box">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm..." />
+                </div>
             <div class="logo">
               <a href="index.html"
                 ><img title="logo"
@@ -50,7 +53,7 @@
               </div>
               <div class="center-1 center2 same-icon">
                 <i class="bi bi-geo-alt-fill"></i>
-                <b style="font-size: 13px">HỆ THỐNG CỬA HÀNG</b>
+                <a href="https://www.google.com/maps?q=10.871309739267502, 106.79176838635757" style="color: #333;"><b style="font-size: 13px" class="map">VỊ TRÍ CỬA HÀNG</b></a>
               </div>
               <div class="center-1 center3">
                 <div class="input1">
@@ -63,13 +66,13 @@
 
 
             <div class="right1">
-              <div class="icon icon2">
+              <div class="icon icon2" id="icon3">
                 <i class="bi bi-person-circle"></i>
                 <p style="margin: 0">TÀI KHOẢN</p>
               </div>
 
               
-              <div class="register-login">
+              <div class="register-login" id="loginForm">
             <a href="./Assets/component/login_logout/login.html" class="a-same-nodecoration"><div class="no-margin">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -108,12 +111,20 @@
             </div></a>
           </div>
 
+                <div class="personal_logout" id="personal_logout">
+                    <a href="./Assets/component/cart_payment/Order.html" class="a-same-nodecoration1"><div class="no-margin1">
+                        <p>Trang cá nhân</p>
+                    </div></a>
+                    <div class="no-margin1 no-margin2">
+                        <span id="logoutbtn" class="logoutbtn">Đăng xuất</span>
+                    </div>
+                </div>
 
               <a href="./Assets/component/cart_payment/cart.html"><div class="icon">
                 <div class="cart">
                   <i class="bi bi-cart2" title="cart"></i>
                   <div class="num">
-                    <p id="cart-num"
+                    <p id="cart_num"
                       style="
                         border-radius: 8px;
                         padding: 2px;
@@ -350,10 +361,9 @@
         </div>
       </div>
     </footer>
-    <script src="./Assets/js/fetch_header_footer/main.js"></script>
-    <script src="Assets/js/logic_login_logout/login_logout.js"></script>
+    <!-- <script src="./Assets/js/fetch_header_footer/main.js"></script>
+    <script src="./Assets/js/login_UI_status/UI_status.js"></script>
     <script src="./Assets/js/display_num_cart/num_cart.js"></script>
-    <!--<script src="/Assets/js/main.js"></script>-->
+    <script src="Assets/js/logic_logout/logout.js"></script> -->
   </body>
 </html>
-
