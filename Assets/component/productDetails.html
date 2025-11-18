@@ -187,6 +187,7 @@
                     <h2 id="product-name"></h2>
                     <p><strong>Mã sản phẩm:</strong> <span id="product-id"></span></p>
                     <p><strong>Danh mục:</strong> <span id="product-category"></span></p>
+                    <p><strong>Thương hiệu:</strong> <span id="product-brand"></span></p>
                     <p class="price" id="product-price"></p>
                     <p><strong>Tình trạng:</strong> <span style="color: red">Còn hàng</span></p>
 
@@ -199,6 +200,10 @@
                         <div class="product-description">
                             <h3>Mô tả sản phẩm</h3>
                             <p id="product-description"></p>
+                            <strong><p id="describe_1"></p></strong>
+                            <strong><p id="describe_2"></p></strong>
+                            <strong><p id="describe_3"></p></strong>
+                            <strong><p id="describe_4"></p></strong>
                         </div>
                     </div>
 
@@ -241,6 +246,75 @@
         </section>
     </main>
     <!-- <div id="footer"></div> -->
+
+
+    <!-- 
+      reviews
+     -->
+    <div class="review-section">
+  <h2>Đánh giá & nhận xét <span id="product_name"></span></h2>
+  
+  <div class="overall-rating">
+    <div class="score">
+      <h3>5.0/5</h3>
+      <div class="stars">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      </div>
+      <p>5 đánh giá</p>
+    </div>
+    <div class="rating-bars">
+      <div class="rating-bar">
+        5 <i class="fas fa-star"></i>
+        <div class="bar-container"><div class="bar" style="width:100%"></div></div>
+        <span>5 đánh giá</span>
+      </div>
+      <div class="rating-bar">
+        4 <i class="fas fa-star"></i>
+        <div class="bar-container"><div class="bar" style="width:0%"></div></div>
+        <span>0 đánh giá</span>
+      </div>
+      <div class="rating-bar">
+        3 <i class="fas fa-star"></i>
+        <div class="bar-container"><div class="bar" style="width:0%"></div></div>
+        <span>0 đánh giá</span>
+      </div>
+      <div class="rating-bar">
+        2 <i class="fas fa-star"></i>
+        <div class="bar-container"><div class="bar" style="width:0%"></div></div>
+        <span>0 đánh giá</span>
+      </div>
+      <div class="rating-bar">
+        1 <i class="fas fa-star"></i>
+        <div class="bar-container"><div class="bar" style="width:0%"></div></div>
+        <span>0 đánh giá</span>
+      </div>
+    </div>
+  </div>
+
+  <a href="#" class="review-button">Đánh giá ngay</a>
+
+  <!-- List reviews -->
+  <div class="review-item">
+    <h4>Huy Phan <span class="stars">★★★★★</span></h4>
+    <p>Nhận xét: Loại lưới nào phù hợp với vợt này ạ</p>
+    <div class="review-date">2 năm trước</div>
+  </div>
+
+  <div class="review-item">
+    <h4>Thanh Huy <span class="stars">★★★★★</span></h4>
+    <p>Nhận xét: Rất ngon</p>
+    <div class="review-date">3 năm trước</div>
+  </div>
+
+  <div class="review-item">
+    <h4>Nguyễn Phước Thịnh <span class="stars">★★★★★</span></h4>
+    <p>Nhận xét: Chất lượng tốt, đáng mua</p>
+    <div class="review-date">3 năm trước</div>
+  </div>
+
+</div>
 
     <footer class="footer">
       <div class="footer-container">
@@ -306,7 +380,7 @@
 <!--    <script src="../js/logic_login_logout/login_logout.js"></script>-->
 <!--    <script src="../js/display_num_cart/num_cart.js"></script>-->
 
-    <script>
+    <!-- <script>
         document.addEventListener("DOMContentLoaded", () => {
             const params = new URLSearchParams(window.location.search);
             let productId = params.get("data-id");
@@ -358,7 +432,8 @@
     </script>
     <script src="../js/product_details/productDetails.js"></script>
     <script src="../js/fetch_header_footer/main.js"></script>
-    <script src="../js/logic_login_logout/login_logout.js"></script>
+    <script src="../js/login_UI_status/UI_status.js"></script>
     <script src="../js/display_num_cart/num_cart.js"></script>
+    <script src="../js/logic_logout/logout.js"></script> -->
   </body>
 </html>
