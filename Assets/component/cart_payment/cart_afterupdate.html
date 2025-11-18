@@ -6,7 +6,14 @@
     <title>Cart</title>
     <link rel="stylesheet" href="../../css/cart_payment_style/cart.css" />
     <link rel="stylesheet" href="/Assets/css/same_style/style.css" />
-    <link rel="stylesheet" href="/Assets/css/recycleFilecss/header.css" />
+    <link
+      rel="stylesheet"
+      href="../../css/cart_payment_style/cart_afterlogin.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/Assets/css/recycleFilecss/header_afterlogin.css"
+    />
     <link rel="stylesheet" href="/Assets/css/recycleFilecss/footer.css" />
     <link
       rel="stylesheet"
@@ -64,7 +71,11 @@
               </div>
               <div class="center-1 center2 same-icon">
                 <i class="bi bi-geo-alt-fill"></i>
-                <a href="https://www.google.com/maps?q=10.871309739267502, 106.79176838635757" style="color: #333;"><b style="font-size: 13px" class="map">VỊ TRÍ CỬA HÀNG</b></a>
+                <a
+                  href="https://www.google.com/maps?q=10.871309739267502, 106.79176838635757"
+                  style="color: #333"
+                  ><b style="font-size: 13px" class="map">VỊ TRÍ CỬA HÀNG</b></a
+                >
               </div>
               <div class="center-1 center3">
                 <div class="input1">
@@ -131,17 +142,21 @@
               </div>
 
               <div class="personal_logout" id="personal_logout">
-                <a href="./Order.html" class="a-same-nodecoration1"
+                <a
+                  href="../update_information/order_afterupdate.html"
+                  class="a-same-nodecoration1"
                   ><div class="no-margin1">
                     <p>Trang cá nhân</p>
                   </div></a
                 >
-                <div class="no-margin1 no-margin2">
-                  <span id="logoutbtn" class="logoutbtn">Đăng xuất</span>
-                </div>
+                <a href="../cart_payment/cart.html" style="color: #333"
+                  ><div class="no-margin1 no-margin2">
+                    <span class="logoutbtn" id="logoutbtn">Đăng xuất</span>
+                  </div>
+                </a>
               </div>
 
-              <a href="./cart.html"
+              <a href="./cart_afterupdate.html"
                 ><div class="icon" id="cart_icon">
                   <div class="cart">
                     <i class="bi bi-cart2" title="cart"></i>
@@ -155,7 +170,7 @@
                           color: white;
                         "
                       >
-                        0
+                        3
                       </p>
                     </div>
                   </div>
@@ -169,17 +184,17 @@
         <div class="menu">
           <div class="container">
             <div class="menu2">
-              <a href="../../../index.html"
+              <a href="../../../index_afterupdate.html"
                 ><div title="menu" class="menu3">TRANG CHỦ</div></a
               >
-              <a href="../../../products.html"
+              <a href="../../../products_afterupdate.html"
                 ><div title="menu" class="menu3">SẢN PHẨM</div></a
               >
 
-              <a href="../../../about.html"
+              <a href="../../../about_after.html"
                 ><div title="menu" class="menu3">GIỚI THIỆU</div></a
               >
-              <a href="../../../contact.html"
+              <a href="../../../contact_afterupdate.html"
                 ><div title="menu" class="menu3">LIÊN HỆ</div></a
               >
             </div>
@@ -190,38 +205,60 @@
 
     <div class="container" id="cart-item">
       <div class="title">
-        <p>Giỏ hàng của bạn: <span id="for_you">Khách</span></p>
+        <p>Giỏ hàng của bạn: <span id="for_you">datbietbay123</span></p>
       </div>
 
       <table class="cart-table">
         <tbody id="cart-items"></tbody>
-        <tr>
-          <td style="text-align: center;">
-            
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="45"
-              height="45"
-              fill="currentColor"
-              class="bi bi-cart"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
-              />
-            </svg>
-            <h3>Hiện chưa có sản phẩm nào trong giỏ hàng của bạn</h3>
-          </td>
-        </tr>
+        <div class="cart-mini">
+          <!-- ITEM 1 -->
+          <div class="cart-item">
+            <img src="../../image/baner4.webp" alt="" class="cart-img" />
+
+            <p class="cart-name">
+              Tay Cầm Chơi Game Flydigi Vader 4 Pro Controller
+            </p>
+
+            <div class="cart-qty">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-number">1</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+
+            <p class="cart-price">8.990.000₫</p>
+
+            <button class="remove-btn">×</button>
+          </div>
+
+          <!-- ITEM 2 -->
+          <div class="cart-item">
+            <img src="../../image/baner4.webp" alt="" class="cart-img" />
+
+            <p class="cart-name">
+
+Tay Cầm Chơi Game Flydigi Vader 4 Pro Controller</p>
+
+            <div class="cart-qty">
+              <button class="qty-btn minus">-</button>
+              <span class="qty-number">2</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+
+            <p class="cart-price">8.990.000₫</p>
+
+            <button class="remove-btn">×</button>
+          </div>
+        </div>
+
         <tr class="summary-row">
           <td colspan="3" style="border-bottom: none">TỔNG TIỀN:</td>
           <td class="total-amount" style="border-bottom: none">
-            <span id="total-price">0</span>
+            <span id="total-price">26.970.000đ</span>
           </td>
         </tr>
       </table>
 
-      <a href=""><button class="checkout-btn">ĐẶT HÀNG</button></a>
+      <a href="./payment.html"><button class="checkout-btn">ĐẶT HÀNG</button></a>
     </div>
     <!--      <div>-->
     <!--        <div class="cart2">-->

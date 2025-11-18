@@ -6,7 +6,7 @@
     <title>Payment</title>
     <link rel="stylesheet" href="/Assets/css/cart_payment_style/payment.css" />
     <link rel="stylesheet" href="/Assets/css/same_style/style.css">
-    <link rel="stylesheet" href="/Assets/css/recycleFilecss/header.css">
+    <link rel="stylesheet" href="/Assets/css/recycleFilecss/header_afterlogin.css">
     <link rel="stylesheet" href="/Assets/css/recycleFilecss/footer.css">
     <link
       rel="stylesheet"
@@ -108,7 +108,7 @@
             </div></a>
           </div>
                 <div class="personal_logout" id="personal_logout">
-                    <a href="./Order.html" class="a-same-nodecoration1"><div class="no-margin1">
+                    <a href="../update_information/order_afterupdate.html" class="a-same-nodecoration1"><div class="no-margin1">
                         <p>Trang cá nhân</p>
                     </div></a>
                     <div class="no-margin1 no-margin2">
@@ -117,7 +117,7 @@
                 </div>
 
 
-              <a href="../cart_payment/cart.html"><div class="icon">
+              <a href="../cart_payment/cart_afterupdate.html"><div class="icon">
                 <div class="cart">
                   <i class="bi bi-cart2" title="cart"></i>
                   <div class="num">
@@ -129,7 +129,7 @@
                         color: white;
                       "
                     >
-                      0
+                      3
                     </p>
                   </div>
                 </div>
@@ -148,15 +148,15 @@
         <div class="menu">
           <div class="container">
             <div class="menu2">
-              <a href="../../../index.html"><div title="menu" class="menu3">TRANG CHỦ</div></a>
-              <a href="../../../products.html"
+              <a href="../../../index_afterupdate.html"><div title="menu" class="menu3">TRANG CHỦ</div></a>
+              <a href="../../../products_afterupdate.html"
                 ><div title="menu" class="menu3">SẢN PHẨM</div></a
               >
               
-              <a href="../../../about.html"
+              <a href="../../../about_after.html"
                 ><div title="menu" class="menu3">GIỚI THIỆU</div></a
               >
-              <a href="../../../contact.html"
+              <a href="../../../contact_afterupdate.html"
                 ><div title="menu" class="menu3">LIÊN HỆ</div></a
               >
             </div>
@@ -185,7 +185,7 @@
             </div>
             <div class="name_infor">
               <p class="p1 p-same">Email</p>
-              <p class="p2">vana@gmail.com</p>
+              <p class="p2">datbietbay123@gmail.com</p>
             </div>
             <div class="same-style">
               <div class="parent"><input class="input11" type="text"/>
@@ -246,29 +246,33 @@
             </div>
           </div>
           <div class="product1">
-            <p class="title title3">Đơn hàng (5 sản phẩm)</p>
+            <p class="title title3">Đơn hàng (3 sản phẩm)</p>
 
             <div class="flex_infor_product padding-same same">
               <div class="part1">
-                <div class="parent2"><img src="/Assets/image/newps4.png" alt="" />
-                    <div class="child2"><p class="number">3</p></div>
+                <div class="parent2"><img src="../../image/baner4.webp" alt="" />
+                    <div class="child2"><p class="number">1</p></div>
                 </div>    
               </div>
-              <div><p class="title-item">Play Station 4 </p></div>
+              <div><p class="title-item">
+
+Tay Cầm Chơi Game Flydigi Vader 4 Pro Controller</p></div>
               <div class="part3">
-                <p>30.000.000đ</p>
+                <p>8.990.000đ</p>
               </div>
             </div>
 
             <div class="flex_infor_product padding-same same">
               <div class="part1">
-                <div class="parent2"><img src="/Assets/image/newps4.png" alt="" />
+                <div class="parent2"><img src="../../image/baner4.webp" alt="" />
                     <div class="child2"><p class="number">2</p></div>
                 </div>    
               </div>
-              <div><p class="title-item">Play Station 4</p></div>
+              <div><p class="title-item">
+
+Tay Cầm Chơi Game Flydigi Vader 4 Pro Controller</p></div>
               <div class="part3">
-                <p>12.000.000đ</p>
+                <p>16.980.000đ</p>
               </div>
             </div>
 
@@ -276,15 +280,15 @@
               <div class="parent"><input class="input11" type="text" placeholder="Nhập mã giảm giá" />
                   <div class="child"><p class="p3 p-same">Mã giảm giá</p></div>
               </div>
-              <button class="btn-use">Sử dụng</button>
+              <button class="btn-use" style="cursor: pointer;">Sử dụng</button>
             </div>
 
             <div class="infor2 same grid-same">
                 <div class="total-price"><p>Tổng cộng: </p></div>
-                <div><p style="font-size: 20px;">42.000.000</p></div>
+                <div><p style="font-size: 20px;">26.970.000đ</p></div>
             </div>
             <div class="update_and_order same grid-same">
-                <div><button class="same-btn btn-green">Sửa giỏ hàng</button></div>
+                <div><button class="same-btn btn-green"><a href="../cart_payment/cart_afterupdate.html" style="color: #fff;">Sửa giỏ hàng</a></button></div>
                 <a href="../cart_payment/bill.html"><div><button class="same-btn btn-red"  style="cursor: pointer">Đặt hàng</button></div></a>
             </div>
           </div>
@@ -352,8 +356,9 @@ input type="email" placeholder="Nhập Email" />
         </div>
       </div>
     </footer>
-    <script src="/Assets/js/fetch_header_footer/main.js"></script>
-    <script src="../../js/logic_login_logout/login_logout.js"></script>
+    <!-- <script src="/Assets/js/fetch_header_footer/main.js"></script>
+    <script src="../../js/login_UI_status/UI_status.js"></script>
     <script src="../../js/display_num_cart/num_cart.js"></script>
+    <script src="../../js/logic_logout/logout.js"></script> -->
   </body>
 </html>
