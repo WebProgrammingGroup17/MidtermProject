@@ -167,16 +167,17 @@
     </header>
 
 
-    <form action="" class="form-register">
+    <form action="" class="form-register" id="registerForm">
         <div class="container1">
         <h2 class="title">ĐĂNG KÝ</h2>
         <p>Đã có tài khoản, đăng nhập <a href="#">tại đây</a></p>
-        <input class="input" type="text" placeholder="Nhập tên của bạn(*)"><br>
-        <input class="input" type="text" placeholder="Nhập email của bạn(*)"><br>
-        <input class="input" type="text" placeholder="Số điện thoại"><br>
-        <input class="input" type="text" placeholder="Mật khẩu"><br>
-        <input class="input" type="text" placeholder="Nhập lại mật khẩu"><br>
-        <button class="button">ĐĂNG KÝ</button>
+        <input class="input" type="text" id="reg_username" placeholder="Nhập tên của bạn(*)"><br>
+        <input class="input" type="email" id="reg_email" placeholder="Nhập email của bạn(*)"><br>
+        <input class="input" type="text" id="reg_phone" placeholder="Số điện thoại"><br>
+        <input class="input" type="password" id="reg_password" placeholder="Mật khẩu"><br>
+        <input class="input" type="password" id="reg_confirm" placeholder="Nhập lại mật khẩu"><br>
+        <button class="button" type="submit">ĐĂNG KÝ</button>
+        <p id="register_message"></p>
         </div>
     </form>
     <!-- <div id="footer"></div>
@@ -241,8 +242,9 @@
         </div>
       </div>
     </footer>
-    <script src="/Assets/js/fetch_header_footer/main.js"></script>
-    <script src="../../js/logic_login_logout/login_logout.js"></script>
+    <!-- <script src="/Assets/js/fetch_header_footer/main.js"></script>
+    <script src="../../js/login_UI_status/UI_status.js"></script>
     <script src="../../js/display_num_cart/num_cart.js"></script>
+    <script src="../../js/logic_register/register.js"></script> -->
 </body>
 </html>
