@@ -16,6 +16,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
     />
+
 </head>
 <body>
     <!-- <div id="header"></div> -->
@@ -29,11 +30,15 @@
               <i class="bi bi-search" style="font-size: 26px"></i>
             </div>
             <div class="menu-small-frame" style="display: none;" id="menu-small">
-              <div><a href=""><p>Trang Chủ</p></a></div>
-              <div><a href=""><p>Sản Phẩm</p></a></div>
-              <div><a href=""><p>Giới Thiệu</p></a></div>
-              <div><a href=""><p>Liên Hệ</p></a></div>
+                <div><a href="index.html"><p>Trang Chủ</p></a></div>
+                <div><a href="products.html"><p>Sản Phẩm</p></a></div>
+                <div><a href="about.html"><p>Giới Thiệu</p></a></div>
+                <div><a href="contact.html"><p>Liên Hệ</p></a></div>
             </div>
+
+              <div class="search-box-mobile" style="display: none;" id="search-box">
+                  <input type="text" placeholder="Tìm kiếm sản phẩm..." />
+              </div>
             <div class="logo">
               <a href="index.html"
                 ><img title="logo"
@@ -48,7 +53,7 @@
               </div>
               <div class="center-1 center2 same-icon">
                 <i class="bi bi-geo-alt-fill"></i>
-                <b style="font-size: 13px">HỆ THỐNG CỬA HÀNG</b>
+                <a href="https://www.google.com/maps?q=10.871309739267502, 106.79176838635757" style="color: #333;"><b style="font-size: 13px" class="map">VỊ TRÍ CỬA HÀNG</b></a>
               </div>
               <div class="center-1 center3">
                 <div class="input1">
@@ -61,13 +66,13 @@
 
 
             <div class="right1">
-              <div class="icon icon2">
+              <div class="icon icon2" id="icon3">
                 <i class="bi bi-person-circle"></i>
                 <p style="margin: 0">TÀI KHOẢN</p>
               </div>
 
               
-              <div class="register-login">
+              <div class="register-login" id="loginForm">
             <a href="./Assets/component/login_logout/login.html" class="a-same-nodecoration"><div class="no-margin">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -105,13 +110,22 @@
               </svg><p>Đăng ký</p>
             </div></a>
           </div>
+                <div class="personal_logout" id="personal_logout">
+                    <a href="./Assets/component/cart_payment/Order.html" class="a-same-nodecoration1"><div class="no-margin1">
+                        <p>Trang cá nhân</p>
+                    </div></a>
+                    <div class="no-margin1 no-margin2">
+                        <span id="logoutbtn" class="logoutbtn">Đăng xuất</span>
+                    </div>
+                </div>
+
 
 
               <a href="./Assets/component/cart_payment/cart.html"><div class="icon">
                 <div class="cart">
                   <i class="bi bi-cart2" title="cart"></i>
                   <div class="num">
-                    <p
+                    <p id="cart_num"
                       style="
                         border-radius: 8px;
                         padding: 2px;
@@ -161,60 +175,78 @@
             <div class="filter" id="filter-panel">
                 <div class="title">CHỌN MỨC GIÁ</div>
                 <div class="choice">
-                    <input type="checkbox" class="check" id="check1" name="checkbox1" ><label>Giá dưới 500.000đ </label>
+                    <input type="checkbox" class="check filter-price" id="check1" name="checkbox1" value="under500"><label>Giá dưới 500.000đ </label>
                 </div>
                 <div class="choice">
-                    <input type="checkbox" class="check" id="check2" name="checkbox1" ><label>500.000đ - 1 triệu </label>
+                    <input type="checkbox" class="check filter-price" id="check2" name="checkbox1" value="500-1000"><label>500.000đ - 1 triệu </label>
                 </div>
 
                 <div class="choice">
-                    <input type="checkbox" class="check" id="check3" name="checkbox1" ><label>1 - 2 triệu </label>
+                    <input type="checkbox" class="check filter-price" id="check3" name="checkbox1" value="1000-2000"><label>1 - 2 triệu </label>
                 </div>
                     <div class="choice">
-                    <input type="checkbox" class="check" id="check4" name="checkbox1" ><label>2 - 3 triệu </label>
+                    <input type="checkbox" class="check filter-price" id="check4" name="checkbox1" value="2000-3000"><label>2 - 3 triệu </label>
                     </div>
                         <div class="choice">
-                    <input type="checkbox" class="check" id="check5" name="checkbox1" ><label>Trên 3 triệu </label>
+                    <input type="checkbox" class="check filter-price" id="check5" name="checkbox1" value="higher3000"><label>Trên 3 triệu </label>
                         </div>
 
 
                 <div class="title">THƯƠNG HIỆU</div>
                 <div class="choice">
-                    <input type="checkbox" class="check" id="checkt1" name="checkbox2"><label>Sony</label>
+                    <input type="checkbox" class="check filter-brand" id="checkt1" name="checkbox2" value="sony"><label>Sony</label>
                 </div>
 
                 <div class="choice">
-                    <input type="checkbox" class="check" id="checkt2" name="checkbox2"><label>Nintendo</label>
+                    <input type="checkbox" class="check filter-brand" id="checkt2" name="checkbox2" value="nintendo"><label>Nintendo</label>
                 </div>
 
                 <div class="choice">
-                    <input type="checkbox" class="check" id="checkt3" name="checkbox2"><label>Xbox</label>
+                    <input type="checkbox" class="check filter-brand" id="checkt3" name="checkbox2" value="xbox"><label>Xbox</label>
                 </div>
                 <div class="choice">
-                    <input type="checkbox" class="check" id="checkt4" name="checkbox2"><label>Asus</label>
+                    <input type="checkbox" class="check filter-brand" id="checkt4" name="checkbox2" value="asus"><label>Asus</label>
                 </div>
                 <div class="choice">
-                    <input type="checkbox" class="check" id="checkt5" name="checkbox2"><label>Steam</label>
+                    <input type="checkbox" class="check filter-brand" id="checkt5" name="checkbox2" value="steam"><label>Steam</label>
                 </div>
                 <div class="choice">
-                    <input type="checkbox" class="check" id="checkt6" name="checkbox2"><label>MSI</label>
+                    <input type="checkbox" class="check filter-brand" id="checkt6" name="checkbox2" value="msi"><label>MSI</label>
                 </div>
                 <div class="choice">
-                    <input type="checkbox" class="check" id="checkt7" name="checkbox2"><label>GDP</label>
+                    <input type="checkbox" class="check filter-brand" id="checkt7" name="checkbox2" value="gdp"><label>GDP</label>
                 </div>
                 <div class="choice">
-                    <input type="checkbox" class="check" id="checkt8" name="checkbox2"><label>Ayaneo</label>
+                    <input type="checkbox" class="check filter-brand" id="checkt8" name="checkbox2" value="ayaneo"><label>Ayaneo</label>
                 </div>
                 <div class="choice">
-                    <input type="checkbox" class="check" id="checkt9" name="checkbox2"><label>Anbernic</label>
+                    <input type="checkbox" class="check filter-brand" id="checkt9" name="checkbox2" value="anbernic"><label>Anbernic</label>
                 </div>
                 <div class="choice">
-                    <input type="checkbox" class="check" id="checkt10" name="checkbox2"><label>Retroid</label>
+                    <input type="checkbox" class="check filter-brand" id="checkt10" name="checkbox2" value="retroid"><label>Retroid</label>
                 </div>
                 <div class="choice">
-                    <input type="checkbox" class="check" id="checkt11" name="checkbox2"><label>Miyoo</label>
+                    <input type="checkbox" class="check filter-brand" id="checkt11" name="checkbox2" value="miyoo"><label>Miyoo</label>
                 </div>
+
+                <div class="title">
+                  DANH MỤC
+                </div>
+                <div class="choice">
+                    <input type="checkbox" class="check filter-category" id="checkt8" name="checkbox2"  value="homeconsole"><label>Home Console</label>
+                </div>
+                <div class="choice">
+                    <input type="checkbox" class="check filter-category" id="checkt9" name="checkbox2"  value="remotehandheld"   ><label>Remote Handheld</label>
+                </div>
+                <div class="choice">
+                    <input type="checkbox" class="check filter-category" id="checkt9" name="checkbox2" value="handheldpc"><label>Handheld PC</label>
+                </div>
+                <div class="choice">
+                    <input type="checkbox" class="check filter-category" id="checkt9" name="checkbox2" value="handheldconsole"><label>Handheld Console</label>
+                </div>
+                
             </div>
+            
 
                 <!-- san pham           -->
             <div class="contain">
@@ -244,10 +276,12 @@
                     <i class="fa-solid fa-sliders"></i> Bộ lọc
                 </button>
 
+                
+                <div id="product-list"></div>
                 <!--  San Pham -->
                 <div id="product-list">
                         <!--SP1 -->
-                        <div class="product-item" data-id="C001">
+                        <div class="product-item sony remotehandheld" data-id="C001">
                             <img src="Assets/image/products1.png" alt="">
                             <div class="tag">Premium</div>
 
@@ -258,7 +292,7 @@
                         </div>
 
                         <!-- SP 2 -->
-                        <div class="product-item" data-id="C002">
+                        <div class="product-item sony remotehandheld" data-id="C002">
                             <img src="Assets/image/products2.png" alt="">
                             <div class="tag">Premium</div>
 
@@ -269,7 +303,7 @@
                         </div>
 
                         <!-- SP 3 -->
-                        <div class="product-item" data-id="C003">
+                        <div class="product-item sony remotehandheld" data-id="C003">
                             <img src="Assets/image/products3.png" alt="">
                             <div class="tag">Premium</div>
 
@@ -280,7 +314,7 @@
                         </div>
 
                         <!-- SP 4 -->
-                        <div class="product-item" data-id="C004">
+                        <div class="product-item sony remotehandheld" data-id="C004">
                             <img src="Assets/image/products4.png" alt="">
                             <div class="tag">Premium</div>
 
@@ -291,7 +325,7 @@
                         </div>
                 
                     <!--SP2.1 -->
-                    <div class="product-item" data-id="C005">
+                    <div class="product-item sony handheldpc" data-id="C005">
                         <img src="Assets/image/products2_1.png" alt="">
 
                         <div class="product-info">
@@ -300,7 +334,7 @@
                         </div>
                     </div>
                     <!-- SP 2.2 --->
-                    <div class="product-item">
+                    <div class="product-item sony handheldpc" data-id="C006">
                         <img src="Assets/image/products2_2.png" alt="">
 
                         <div class="product-info">
@@ -310,7 +344,7 @@
                     </div>
 
                     <!-- 2.3-->
-                    <div class="product-item">
+                    <div class="product-item sony homeconsole" data-id="C007">
                         <img src="Assets/image/products2_3.png" alt="">
 
                         <div class="product-info">
@@ -319,7 +353,7 @@
                         </div>
                     </div>
                     <!-- 2.4 -->
-                    <div class="product-item">
+                    <div class="product-item sony homeconsole" data-id="C008">
                         <img src="Assets/image/products2_4.png" alt="">
 
                         <div class="product-info">
@@ -329,7 +363,7 @@
                     </div>
 
                     <!--   3.1      -->
-                    <div class="product-item">
+                    <div class="product-item sony homeconsole" data-id="C009">
                         <img src="Assets/image/products3_1.png" alt="">
 
                         <div class="product-info">
@@ -339,7 +373,7 @@
                     </div>
 
                     <!-- 3.2-->
-                    <div class="product-item">
+                    <div class="product-item sony homeconsole" data-id="C0010">
                         <img src="Assets/image/products3_2.png" alt="">
 
                         <div class="product-info">
@@ -350,7 +384,7 @@
 
 
                     <!--3.3-->
-                    <div class="product-item">
+                    <div class="product-item sony homeconsole" data-id="C0011">
                         <img src="Assets/image/products3_3.png" alt="">
 
                         <div class="product-info">
@@ -360,7 +394,7 @@
                     </div>
 
                     <!--3.4-->
-                    <div class="product-item">
+                    <div class="product-item sony homeconsole" data-id="C0012">
                         <img src="Assets/image/products3_4.png" alt="">
 
 
@@ -371,7 +405,7 @@
                     </div>
 
                     <!--4.1-->
-                    <div class="product-item">
+                    <div class="product-item sony homeconsole" data-id="C0013">
                         <img src="Assets/image/products4_1.png" alt="">
 
                         <div class="product-info">
@@ -381,7 +415,7 @@
                     </div>
 
                     <!-- 4.2-->
-                    <div class="product-item">
+                    <div class="product-item sony homeconsole" data-id="C0014">
                         <img src="Assets/image/products4_2.png" alt="">
 
                         <div class="product-info">
@@ -392,7 +426,7 @@
 
 
                     <!-- 4.3-->
-                    <div class="product-item">
+                    <div class="product-item sony remotehandheld" data-id="C0015">
                         <img src="Assets/image/products4_3.png" alt="">
 
                         <div class="product-info">
@@ -402,7 +436,90 @@
                     </div>
 
                     <!--4.4-->
-                    <div class="product-item">
+                    <div class="product-item miyoo homeconsole" data-id="C0016">
+                        <img src="Assets/image/products4_4.png" alt="">
+
+
+                        <div class="product-info">
+                            <h4>Microsoft Xbox Wireless Controller – Xbox Series X, Xbox Series S – Sky Cipher Special Edition</h4>
+                            <p class="price">1.449.000 ₫</p>
+                        </div>
+                    </div>
+
+                    <div class="product-item sony homeconsole" data-id="C009">
+                        <img src="Assets/image/products3_1.png" alt="">
+
+                        <div class="product-info">
+                            <h4>Máy Game Retro G5 – 3.0 Inch – 500+ Games</h4>
+                            <p class="price">189.000 ₫</p>
+                        </div>
+                    </div>
+
+                    <!-- 3.2-->
+                    <div class="product-item sony homeconsole" data-id="C0010">
+                        <img src="Assets/image/products3_2.png" alt="">
+
+                        <div class="product-info">
+                            <h4>Máy Game Retro R36S Real – 3.5 Inch – 20.000+ Games</h4>
+                            <p class="price">749.000 ₫</p>
+                        </div>
+                    </div>
+
+
+                    <!--3.3-->
+                    <div class="product-item sony homeconsole" data-id="C0011">
+                        <img src="Assets/image/products3_3.png" alt="">
+
+                        <div class="product-info">
+                            <h4>Máy Game Retro SJGAM M19 – 3.5 Inch – 17.000+ Games</h4>
+                            <p class="price">1.199.000 ₫</p>
+                        </div>
+                    </div>
+
+                    <!--3.4-->
+                    <div class="product-item sony homeconsole" data-id="C0012">
+                        <img src="Assets/image/products3_4.png" alt="">
+
+
+                        <div class="product-info">
+                            <h4>Máy Game Retro TrimUI Brick – 3.2 Inch – 20.000+ Games</h4>
+                            <p class="price">1.649.000 ₫</p>
+                        </div>
+                    </div>
+
+                    <!--4.1-->
+                    <div class="product-item sony homeconsole" data-id="C0013">
+                        <img src="Assets/image/products4_1.png" alt="">
+
+                        <div class="product-info">
+                            <h4>Microsoft Xbox Wireless Controller – Xbox Series X, Xbox Series S – Ghost Cipher Special Edition</h4>
+                            <p class="price">1.499.000 ₫</p>
+                        </div>
+                    </div>
+
+                    <!-- 4.2-->
+                    <div class="product-item sony homeconsole" data-id="C0014">
+                        <img src="Assets/image/products4_2.png" alt="">
+
+                        <div class="product-info">
+                            <h4>Microsoft Xbox Wireless Controller – Xbox Series X, Xbox Series S – Fire Vapor Special Edition</h4>
+                            <p class="price">1.499.000 ₫</p>
+                        </div>
+                    </div>
+
+
+                    <!-- 4.3-->
+                    <div class="product-item sony remotehandheld" data-id="C0015">
+                        <img src="Assets/image/products4_3.png" alt="">
+
+                        <div class="product-info">
+                            <h4>Microsoft Xbox Wireless Controller – Xbox Series X, Xbox Series S – Velocity Green</h4>
+                            <p class="price">1.249.000 ₫</p>
+                        </div>
+                    </div>
+
+                    <!--4.4-->
+                    <div class="product-item miyoo homeconsole" data-id="C0016">
                         <img src="Assets/image/products4_4.png" alt="">
 
 
@@ -430,15 +547,19 @@
                     <a href="#">&raquo;</a>
 
                 </div>
+                <div id="no-products-message" style="display:none; text-align: center; margin-top: 20px;">
+    ❌ Không có sản phẩm nào phù hợp với tiêu chí lọc.
+</div>
 
             </div>
 
 
     </main>
+    <div id="main-content"></div>
 
     <!-- <div id="footer"></div>
     <script src="/Assets/js/main.js"></script>-->
-    <script src="./Assets/js/logic_main/products.js"></script> 
+<!--    <script src="./Assets/js/logic_main/products.js"></script> -->
 
 
     <footer class="footer">
@@ -499,6 +620,13 @@
         </div>
       </div>
     </footer>
+   <!-- <script src="./Assets/js/login_UI_status/UI_status.js"></script>
+   <script src="Assets/js/logic_cart/cart.js"></script>
+   <script src="Assets/js/fetch_header_footer/main.js"></script>
+ <script src="Assets/js/display_num_cart/num_cart.js"></script>
+ <script src="Assets/js/logic_main/products.js"></script>
+ <script src="Assets/js/logic_logout/logout.js"></script> -->
+    
+    
 </body>
-
 </html>
