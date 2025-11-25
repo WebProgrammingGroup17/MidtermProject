@@ -1,0 +1,68 @@
+.container1 {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.field input[type=text],
+.field input[type=email],
+.field input[type=password],
+.field input[type=file],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  transform: scale(1.2);
+  margin-right: 8px;
+}
+
+.btn-group {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button.save {
+  background: #2f8be6;
+  color: #fff;
+}
+
+button.cancel {
+  background: #ccc;
+  color: #000;
+}
+.add-product1{
+    padding: 5px 0px 5px 5px;
+    margin-bottom: 5px;
+}
