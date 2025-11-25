@@ -1,0 +1,88 @@
+.container{
+    display: flex;
+    width: 95%;
+    margin: auto;
+}
+header{
+    background-color: #fff;
+    position:relative;
+    box-shadow: 0 8px 20px rgba(129, 145, 210, 0.2);
+    width: 100%;
+}
+.header-left{
+    display: flex;
+}
+.header-right{
+    display: flex;
+    gap: 20px;
+}
+.logo img{
+    width: 75px;
+    height: 70px;
+}
+.container{
+    justify-content: space-between;
+}
+svg{
+    color: #8d7c83;
+}
+input{
+    border: none;
+    outline: none;
+}
+.hamburger{
+    padding: 26px 0px 0px 50px;
+}
+.search-icon{
+    padding: 28px 0px 0px 30px;
+}
+.search{
+    padding: 29px 0px 0px 5px;
+}
+.bell-dot{
+    position: relative;
+}
+.dot p{
+    position: absolute;
+    top: -62px;
+    left: 5px;
+}
+.padding-same{
+    padding: 27px 0px 0px 0px;
+}
+.user-icon{
+    padding: 22px 0px 0px 0px;
+}
+body{
+    background-color: #f5f7ff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', 'Roboto', 'Helvetica Neue', sans-serif;
+}
+.flex-menu-bar{
+    display: flex;
+    padding: 10px 5px 10px 5px;
+}
+.menu-bar{
+    padding: 15px 15px 0px 15px;
+    background-color: #fff;
+}
+.main{
+    display: grid;
+    grid-template-columns: 1fr 5.5fr;
+}
+p{
+    padding: 0px 0px 0px 10px;
+    margin: 0;
+    font-size: 15px;
+    
+}
+.icon-menu-bar{
+    padding-left: 10px;
+}
+.p-same-style{
+    color: #8d7c83;
+}
+a{
+    text-decoration: none;
+}
