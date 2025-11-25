@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản Lý Bình Luận</title>
+    <link rel="stylesheet" href="../../css/admin/reviewManagement.css" />
+    <link rel="stylesheet" href="../../css/admin/settingUser.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-left">
+          <div class="logo">
+            <a href="">
+              <img
+                src="https://png.pngtree.com/png-clipart/20230217/original/pngtree-gaming-gamepad-icon-png-image_8957696.png"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="hamburger">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill="currentColor"
+              class="bi bi-list"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+              />
+            </svg>
+          </div>
+          <div class="search-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="bi bi-search"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+              />
+            </svg>
+          </div>
+          <div class="search">
+            <input type="text" placeholder="Tìm kiếm" />
+          </div>
+        </div>
+        <div class="header-right">
+          <a href="./functionNotification.html">
+            <div class="bell-dot padding-same">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="23"
+                height="23"
+                fill="currentColor"
+                class="bi bi-bell"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6"
+                />
+              </svg>
+              <div class="dot">
+                <p
+                  style="
+                    font-size: 100px;
+                    margin: 0;
+                    padding: 0;
+                    color: #4b49ac;
+                  "
+                >
+                  .
+                </p>
+              </div>
+            </div>
+          </a>
+          <div class="user-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              fill="currentColor"
+              class="bi bi-person"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
+              />
+            </svg>
+            <div class="setting-user">
+      <div class="name-user padding-setting-user">
+        <span style="padding-bottom: 5px;">datbietbay123</span><br>
+        <span style="color: rgb(175, 175, 175);">datbietbay123@gmail.com</span>
+      </div>
+      <div>
+        <div class="hover"><i class="bi bi-gear padding-setting-user"></i>Settings <br></div>
+        <div class="hover"><i class="bi bi-box-arrow-right padding-setting-user" style="color: red;"></i><span style="color: red;">Sign out</span></div>
+      </div>
+    </div>
+          </div>
+          <div class="padding-same">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="23"
+              height="23"
+              fill="currentColor"
+              class="bi bi-three-dots"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="menu-bar">
+        <a href="./admin.html"
+          ><div class="flex-menu-bar">
+            <div class="icon-menu-bar"><i class="bi bi-grid"></i></div>
+            <div class="p-same-style"><p>Trang tổng quan</p></div>
+          </div>
+        </a>
+        <a href="./userManagement.html">
+          <div class="flex-menu-bar">
+            <div class="icon-menu-bar"><i class="bi bi-people"></i></div>
+            <div class="p-same-style"><p>Quản lý người dùng</p></div>
+            <div style="padding-top: 2px; padding-left: 5px">
+              <i class="bi bi-arrow-down-short"></i>
+            </div>
+          </div>
+        </a>
+        <a href="./productManagement.html">
+          <div class="flex-menu-bar">
+            <div class="icon-menu-bar"><i class="bi bi-bag-check"></i></div>
+            <div class="p-same-style"><p>Quản lý sản phẩm</p></div>
+            <div style="padding-top: 2px; padding-left: 5px">
+              <i class="bi bi-arrow-down-short"></i>
+            </div>
+          </div>
+        </a>
+        <a href="./orderManagement.html">
+          <div class="flex-menu-bar">
+            <div class="icon-menu-bar"><i class="bi bi-receipt"></i></div>
+            <div class="p-same-style"><p>Quản lý đơn hàng</p></div>
+            <div style="padding-top: 2px; padding-left: 5px">
+              <i class="bi bi-arrow-down-short"></i>
+            </div>
+          </div>
+        </a>
+        <div
+          class="flex-menu-bar"
+          style="background-color: #4b49ac; border-radius: 10px; color: #fff"
+        >
+          <div class="icon-menu-bar"><i class="bi bi-chat-left-text"></i></div>
+          <div><p>Quản lý bình luận</p></div>
+          <div style="padding-top: 2px; padding-left: 5px">
+            <i class="bi bi-arrow-down-short"></i>
+          </div>
+        </div>
+        <a href="./statistic.html">
+        <div class="flex-menu-bar">
+          <div class="icon-menu-bar"><i class="bi bi-bar-chart"></i></div>
+          <div class="p-same-style"><p>Thống kê</p></div>
+          <div style="padding-top: 2px; padding-left: 5px">
+            <i class="bi bi-arrow-down-short"></i>
+          </div>
+        </div>
+        </a>
+        <a href="./settingInfor.html">
+        <div class="flex-menu-bar">
+          <div class="icon-menu-bar"><i class="bi bi-gear"></i></div>
+          <div class="p-same-style"><p>Cài đặt</p></div>
+          <div style="padding-top: 2px; padding-left: 5px">
+            <i class="bi bi-arrow-down-short"></i>
+          </div>
+        </div>
+        </a>
+      </div>
+      <div class="content" style="padding: 20px;">
+        <section class="card">
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              gap: 12px;
+              margin-bottom: 12px;
+            "
+          >
+            <div>
+              <h2 style="margin: 0; font-size: 25px; padding-bottom: 15px;">Danh sách đánh giá</h2>
+              <div class="small">
+                Quản lý, kiểm duyệt và phản hồi các review từ khách hàng
+              </div>
+            </div>
+            <div style="display: flex; gap: 8px; align-items: center">
+              <button class="btn excel">Xuất Excel</button>
+              <button class="btn ghost">Cấu hình</button>
+            </div>
+          </div>
+
+          <div class="controls">
+            <div class="search1">
+              <input
+                id="searchInput"
+                placeholder="Tìm theo tên hoặc mã sản phẩm, người đánh giá..."
+              />
+            </div>
+
+            <div class="filters">
+              <div class="chip" id="filterAll">Tất cả</div>
+              <div class="chip" id="filterPending">Chờ duyệt</div>
+              <div class="chip" id="filterApproved">Đã duyệt</div>
+              <div class="chip" id="filterHidden">Đã ẩn</div>
+            </div>
+
+            <div style="margin-left: auto; display: flex; gap: 8px">
+              <div class="chip" style="cursor: pointer;">⭐ Lọc theo sao</div>
+              <select
+                id="starFilter"
+                class="chip"
+                style="border: 0; background: transparent; appearance: none"
+              >
+                <option value="all">Tất cả sao</option>
+                <option>5</option>
+                <option>4</option>
+                <option>3</option>
+                <option>2</option>
+                <option>1</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="overflow: auto">
+            <table id="reviewsTable" aria-label="Danh sách review">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th style="padding-left: 18px;">Ảnh</th>
+                  <th style="padding-left: 50px;">Sản phẩm</th>
+                  <th>Người đánh giá</th>
+                  <th style="padding-left: 30px;">Sao</th>
+                  <th style="padding-left: 30px;">Nội dung</th>
+                  <th>Ngày</th>
+                  <th style="padding-left: 30px;">Trạng thái</th>
+                  <th style="padding-left: 100px;">Thao tác</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-id="r1" data-status="pending" data-stars="4">
+                  <td><input type="checkbox" /></td>
+                  <td>
+                    <div class="thumb">
+                      <img
+                        src="../../image/products2.png"
+                        alt=""
+                        style="width: 100%; height: 100%; object-fit: cover"
+                      />
+                    </div>
+                  </td>
+                  <td>
+                    <div class="product-name">
+                      Tay Cầm Chơi Game Flydigi Apex 5 Elite Controller
+                    </div>
+                    <div class="small">Mã: C002</div>
+                  </td>
+                  <td style="padding: 0px 12px;">
+                    <div style="font-weight: 600">nguyenhung</div>
+                    <div class="small">Verified Buyer</div>
+                  </td>
+                  <td>
+                    <div class="stars">
+                      <span class="star">⭐</span><span class="star">⭐</span
+                      ><span class="star">⭐</span><span class="star">⭐</span>
+                    </div>
+                  </td>
+                  <td style="max-width: 340px">
+                    Máy chơi tốt, mượt, có thể đem theo mọi nơi
+                  </td>
+                  <td class="small">21/11/2025</td>
+                  <td><div class="chip">Chờ duyệt</div></td>
+                  <td class="actions">
+                    <button class="action-btn action-approve">Duyệt</button>
+                    <button class="action-btn action-hide">Ẩn</button>
+                    <button class="action-btn action-delete">Xóa</button>
+                    <button class="action-btn action-look">Xem</button>
+                    <button
+                      class="action-btn action-answer"
+                    >
+                      Trả lời
+                    </button>
+                  </td>
+                </tr>
+
+                <tr data-id="r2" data-status="approved" data-stars="2">
+                  <td><input type="checkbox" /></td>
+                  <td>
+                    <div class="thumb">
+                      <img
+                        src="../../image/products4_1.png"
+                        alt=""
+                        style="width: 100%; height: 100%; object-fit: cover"
+                      />
+                    </div>
+                  </td>
+                  <td>
+                    <div class="product-name">
+                      Microsoft Xbox Wireless Controller – Xbox Series X, Xbox
+                      Series S
+                    </div>
+                    <div class="small">Mã: C0013</div>
+                  </td>
+                  <td style="padding: 0px 12px;">
+                    <div style="font-weight: 600">linhphuong</div>
+                    <div class="small">-</div>
+                  </td>
+                  <td>
+                    <div class="stars">
+                      <span class="star">⭐</span><span class="star">⭐</span>
+                    </div>
+                  </td>
+                  <td style="max-width: 340px">
+                    Màn hình đẹp nhưng chơi game nặng pin hơi yếu. Cần cải thiện
+                  </td>
+                  <td class="small">19/11/2025</td>
+                  <td><div class="chip">Đã duyệt</div></td>
+                  <td class="actions">
+                    <button class="action-btn action-hide">Ẩn</button>
+                    <button class="action-btn action-delete">Xóa</button>
+                    <button class="action-btn action-look">Xem</button>
+                    <button
+                      class="action-btn action-answer"
+                    >
+                      Trả lời
+                    </button>
+                  </td>
+                </tr>
+
+                <tr data-id="r3" data-status="hidden" data-stars="5">
+                  <td><input type="checkbox" /></td>
+                  <td>
+                    <div class="thumb">
+                      <img
+                        src="../../image/products3_3.png"
+                        alt=""
+                        style="width: 100%; height: 100%; object-fit: cover"
+                      />
+                    </div>
+                  </td>
+                  <td>
+                    <div class="product-name">
+                      Máy Game Retro SJGAM M19 – 3.5 Inch – 17.000+ Games
+                    </div>
+                    <div class="small">Mã: C0011</div>
+                  </td>
+                  <td style="padding: 0px 12px;">
+                    <div style="font-weight: 600">trananh</div>
+                    <div class="small">Verified Buyer</div>
+                  </td>
+                  <td>
+                    <div class="stars">
+                      <span class="star">⭐</span><span class="star">⭐</span
+                      ><span class="star">⭐</span><span class="star">⭐</span
+                      ><span class="star">⭐</span>
+                    </div>
+                  </td>
+                  <td style="max-width: 340px">
+                    Rất đẹp, đúng hình, pin sử dụng ổn.
+                  </td>
+                  <td class="small">02/11/2025</td>
+                  <td><div class="chip">Đã ẩn</div></td>
+                  <td class="actions">
+                    <button class="action-btn action-approve">Hiển thị</button>
+                    <button class="action-btn action-delete">Xóa</button>
+                    <button class="action-btn action-look">Xem</button>
+                    <button
+                      class="action-btn action-answer"
+                    >
+                      Trả lời
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="pagination">
+            <div class="page">Prev</div>
+            <div class="page active">1</div>
+            <div class="page">2</div>
+            <div class="page">3</div>
+            <div class="page">Next</div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
