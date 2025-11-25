@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SettingSecurity</title>
+    <link rel="stylesheet" href="../../css/admin/settingSecurity.css" />
+    <link rel="stylesheet" href="../../css/admin/sameSetting.css" />
+    <link rel="stylesheet" href="../../css/admin/settingUser.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-left">
+          <div class="logo">
+            <a href="">
+              <img
+                src="https://png.pngtree.com/png-clipart/20230217/original/pngtree-gaming-gamepad-icon-png-image_8957696.png"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="hamburger">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill="currentColor"
+              class="bi bi-list"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+              />
+            </svg>
+          </div>
+          <div class="search-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="bi bi-search"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+              />
+            </svg>
+          </div>
+          <div class="search">
+            <input type="text" placeholder="Tìm kiếm" />
+          </div>
+        </div>
+        <div class="header-right">
+          <a href="./functionNotification.html">
+            <div class="bell-dot padding-same">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="23"
+                height="23"
+                fill="currentColor"
+                class="bi bi-bell"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6"
+                />
+              </svg>
+              <div class="dot">
+                <p
+                  style="
+                    font-size: 100px;
+                    margin: 0;
+                    padding: 0;
+                    color: #4b49ac;
+                  "
+                >
+                  .
+                </p>
+              </div>
+            </div>
+          </a>
+          <div class="user-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              fill="currentColor"
+              class="bi bi-person"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
+              />
+            </svg>
+            <div class="setting-user">
+      <div class="name-user padding-setting-user">
+        <span style="padding-bottom: 5px;">datbietbay123</span><br>
+        <span style="color: rgb(175, 175, 175);">datbietbay123@gmail.com</span>
+      </div>
+      <div>
+        <div class="hover"><i class="bi bi-gear padding-setting-user"></i>Settings <br></div>
+        <div class="hover"><i class="bi bi-box-arrow-right padding-setting-user" style="color: red;"></i><span style="color: red;">Sign out</span></div>
+      </div>
+    </div>
+          </div>
+          <div class="padding-same">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="23"
+              height="23"
+              fill="currentColor"
+              class="bi bi-three-dots"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="menu-bar">
+        <a href="./admin.html"
+          ><div class="flex-menu-bar">
+            <div class="icon-menu-bar"><i class="bi bi-grid"></i></div>
+            <div class="p-same-style"><p>Trang tổng quan</p></div>
+          </div>
+        </a>
+        <a href="./userManagement.html">
+          <div class="flex-menu-bar">
+            <div class="icon-menu-bar"><i class="bi bi-people"></i></div>
+            <div class="p-same-style"><p>Quản lý người dùng</p></div>
+            <div style="padding-top: 2px; padding-left: 5px">
+              <i class="bi bi-arrow-down-short"></i>
+            </div>
+          </div>
+        </a>
+        <a href="./productManagement.html">
+          <div class="flex-menu-bar">
+            <div class="icon-menu-bar"><i class="bi bi-bag-check"></i></div>
+            <div class="p-same-style"><p>Quản lý sản phẩm</p></div>
+            <div style="padding-top: 2px; padding-left: 5px">
+              <i class="bi bi-arrow-down-short"></i>
+            </div>
+          </div>
+        </a>
+        <a href="./orderManagement.html">
+          <div class="flex-menu-bar">
+            <div class="icon-menu-bar"><i class="bi bi-receipt"></i></div>
+            <div class="p-same-style"><p>Quản lý đơn hàng</p></div>
+            <div style="padding-top: 2px; padding-left: 5px">
+              <i class="bi bi-arrow-down-short"></i>
+            </div>
+          </div> </a
+        ><a href="./reviewManagement.html">
+          <div class="flex-menu-bar">
+            <div class="icon-menu-bar">
+              <i class="bi bi-chat-left-text"></i>
+            </div>
+            <div class="p-same-style"><p>Quản lý bình luận</p></div>
+            <div style="padding-top: 2px; padding-left: 5px">
+              <i class="bi bi-arrow-down-short"></i>
+            </div>
+          </div>
+        </a>
+        <a href="./statistic.html">
+          <div class="flex-menu-bar">
+            <div class="icon-menu-bar"><i class="bi bi-bar-chart"></i></div>
+            <div class="p-same-style"><p>Thống kê</p></div>
+            <div style="padding-top: 2px; padding-left: 5px">
+              <i class="bi bi-arrow-down-short"></i>
+            </div>
+          </div>
+        </a>
+        <div
+          class="flex-menu-bar"
+          style="background-color: #4b49ac; border-radius: 10px; color: #fff"
+        >
+          <div class="icon-menu-bar"><i class="bi bi-gear"></i></div>
+          <div><p>Cài đặt</p></div>
+          <div style="padding-top: 2px; padding-left: 5px">
+            <i class="bi bi-arrow-up-short"></i>
+          </div>
+        </div>
+        <div class="product-add-product" style="padding: 2px 0px 0px 30px">
+          <a href="./settingInfor.html"
+            ><div class="add-product1 product-now p-same-style">
+              <i class="bi bi-box" style="padding-right: 10px"></i
+              ><span>Thông tin admin</span>
+            </div></a
+          >
+          <a href="./settingNotification.html"
+            ><div class="add-product1 p-same-style">
+              <i class="bi bi-bell" style="padding-right: 10px"></i
+              ><span>Thông báo</span>
+            </div></a
+          >
+          <a href="./settingSecurity.html"
+            ><div
+              class="add-product1"
+              style="
+                background-color: #4b49ac;
+                border-radius: 10px;
+                color: #fff;
+              "
+            >
+              <i class="bi bi-shield" style="padding-right: 10px"></i
+              ><span>Bảo mật</span>
+            </div></a
+          >
+          <a href="./settingAppearance.html"
+            ><div class="add-product1 p-same-style">
+              <i class="bi bi-circle-half" style="padding-right: 10px"></i
+              ><span>Giao diện</span>
+            </div></a
+          >
+        </div>
+      </div>
+      <div class="content">
+        <div class="container1">
+          <h2>Bảo mật tài khoản</h2>
+
+          <div class="field">
+            <label>Mật khẩu hiện tại</label>
+            <input type="password" />
+          </div>
+
+          <div class="field">
+            <label>Mật khẩu mới</label>
+            <input type="password" />
+          </div>
+
+          <div class="field">
+            <label>Nhập lại mật khẩu mới</label>
+            <input type="password" />
+          </div>
+
+          <hr style="margin: 25px 0" />
+
+          <h2>Xác thực hai lớp (2FA)</h2>
+
+          <div class="field">
+            <label
+              ><input type="checkbox" /> Bật xác thực 2 lớp qua Email</label
+            >
+          </div>
+
+          <div class="field">
+            <label><input type="checkbox" /> Bật xác thực 2 lớp qua SMS</label>
+          </div>
+
+          <hr style="margin: 25px 0" />
+
+          <h2>Phiên đăng nhập</h2>
+
+          <div class="field">
+            <label>Thời gian hết hạn phiên</label>
+            <select>
+              <option>30 phút</option>
+              <option>1 giờ</option>
+              <option>2 giờ</option>
+              <option>6 giờ</option>
+              <option>24 giờ</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label
+              ><input type="checkbox" /> Đăng xuất khỏi tất cả thiết bị</label
+            >
+          </div>
+
+          <div class="btn-group">
+            <button class="save">Lưu thay đổi</button>
+            <button class="cancel">Huỷ</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
