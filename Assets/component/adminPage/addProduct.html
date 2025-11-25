@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thêm Sản Phẩm</title>
+    <link rel="stylesheet" href="../../css/admin/addProduct.css" />
+    <link rel="stylesheet" href="../../css/admin/settingUser.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-left">
+          <div class="logo">
+            <a href="">
+              <img
+                src="https://png.pngtree.com/png-clipart/20230217/original/pngtree-gaming-gamepad-icon-png-image_8957696.png"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="hamburger">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill="currentColor"
+              class="bi bi-list"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+              />
+            </svg>
+          </div>
+          <div class="search-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="bi bi-search"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+              />
+            </svg>
+          </div>
+          <div class="search">
+            <input type="text" placeholder="Tìm kiếm" />
+          </div>
+        </div>
+        <div class="header-right">
+          <div class="bell-dot padding-same">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="23"
+              height="23"
+              fill="currentColor"
+              class="bi bi-bell"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6"
+              />
+            </svg>
+            <div class="dot">
+              <p
+                style="font-size: 100px; margin: 0; padding: 0; color: #4b49ac"
+              >
+                .
+              </p>
+            </div>
+          </div>
+          <div class="user-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              fill="currentColor"
+              class="bi bi-person"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
+              />
+            </svg>
+            <div class="setting-user">
+      <div class="name-user padding-setting-user">
+        <span style="padding-bottom: 5px;">datbietbay123</span><br>
+        <span style="color: rgb(175, 175, 175);">datbietbay123@gmail.com</span>
+      </div>
+      <div>
+        <div class="hover"><i class="bi bi-gear padding-setting-user"></i>Settings <br></div>
+        <div class="hover"><i class="bi bi-box-arrow-right padding-setting-user" style="color: red;"></i><span style="color: red;">Sign out</span></div>
+      </div>
+    </div>
+          </div>
+          <div class="padding-same">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="23"
+              height="23"
+              fill="currentColor"
+              class="bi bi-three-dots"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="menu-bar">
+        <a href="./admin.html">
+        <div class="flex-menu-bar">
+          <div class="icon-menu-bar"><i class="bi bi-grid"></i></div>
+          <div class="p-same-style"><p>Trang tổng quan</p></div>
+        </div>
+        </a>
+        <a href="./userManagement.html">
+        <div class="flex-menu-bar">
+          <div class="icon-menu-bar"><i class="bi bi-people"></i></div>
+          <div class="p-same-style"><p>Quản lý người dùng</p></div>
+          <div style="padding-top: 2px; padding-left: 5px">
+            <i class="bi bi-arrow-down-short"></i>
+          </div>
+        </div>
+        </a>
+        <div
+          class="flex-menu-bar"
+          style="background-color: #4b49ac; border-radius: 10px; color: #fff"
+        >
+          <div class="icon-menu-bar"><i class="bi bi-bag-check"></i></div>
+          <div><p>Quản lý sản phẩm</p></div>
+          <div style="padding-top: 2px; padding-left: 5px">
+            <i class="bi bi-arrow-up-short"></i>
+          </div>
+        </div>
+        <div class="product-add-product">
+            <a href="./productManagement.html"><div class="product-now p-same-style"><i class="bi bi-box" style="padding-right: 10px;"></i><span>Sản phẩm</span></div></a>
+            <a href="./addProduct.html"><div class="add-product1" ><i class="bi bi-plus-lg" style="padding-right: 10px;"></i><span>Add product</span></div></a>
+        </div>
+        <a href="./orderManagement.html">
+        <div class="flex-menu-bar">
+          <div class="icon-menu-bar"><i class="bi bi-receipt"></i></div>
+          <div class="p-same-style"><p>Quản lý đơn hàng</p></div>
+          <div style="padding-top: 2px; padding-left: 5px">
+            <i class="bi bi-arrow-down-short"></i>
+          </div>
+        </div>
+        </a>
+        <a href="./reviewManagement.html">
+        <div class="flex-menu-bar">
+          <div class="icon-menu-bar"><i class="bi bi-chat-left-text"></i></div>
+          <div class="p-same-style"><p>Quản lý bình luận</p></div>
+          <div style="padding-top: 2px; padding-left: 5px">
+            <i class="bi bi-arrow-down-short"></i>
+          </div>
+        </div>
+        </a>
+        <a href="./statistic.html">
+        <div class="flex-menu-bar">
+          <div class="icon-menu-bar"><i class="bi bi-bar-chart"></i></div>
+          <div class="p-same-style"><p>Thống kê</p></div>
+          <div style="padding-top: 2px; padding-left: 5px">
+            <i class="bi bi-arrow-down-short"></i>
+          </div>
+        </div>
+        </a>
+        <a href="./settingInfor.html">
+        <div class="flex-menu-bar">
+          <div class="icon-menu-bar"><i class="bi bi-gear"></i></div>
+          <div class="p-same-style"><p>Cài đặt</p></div>
+          <div style="padding-top: 2px; padding-left: 5px">
+            <i class="bi bi-arrow-down-short"></i>
+          </div>
+        </div>
+        </a>
+      </div>
+      <div class="content">
+        <div class="title3">
+          <p class="p1">Add New Product</p>
+          <p class="p2">Create a new product and add it to your inventory.</p>
+        </div>
+        <div class="grid-layout-1">
+          <div class="div1">
+            <div class="product-infor">
+              <p class="product-1">Product Information</p>
+              <p class="product-2">Product Name *</p>
+              <div class="input2"><input type="text" placeholder="Enter product name" /></div>
+              <div class="flex-layout-8">
+                <div class="left">
+                  <p style="padding-bottom: 10px;">SKU *</p>
+                  <input class="input3" type="text" placeholder="PRD-2024-001"/>
+                </div>
+                <div class="right"> 
+                  <p style="padding-bottom: 10px; margin: 0; padding: 0px 0px 10px 0px;">Category *</p>
+                  <select id="category">
+                    <option value="console">Console</option>
+                    <option value="controller">Tay cầm</option>
+                    <option value="accessory">Phụ kiện</option>
+                    <option value="game">Game</option>
+                  </select>
+                </div>
+              </div>
+              <p>Mô tả</p>
+              <div class="describe"><textarea name="" id=""></textarea></div>
+            </div>
+
+
+
+            <div class="div2">
+              <p class="product-1">Pricing & Inventory</p>
+              <div class="grid-layout-2">
+                <div>
+                  <p class="product-2">Price *</p>
+                  <div class="flex-layout-9"> 
+                    <div><i class="bi bi-currency-dollar"></i></div>
+                    <div style="width: 100%;"><input type="number" placeholder="0.00" /></div>
+                  </div>
+                </div>
+                <div class="stock-quantity">
+                  <p style="padding-bottom: 10px; padding-left: 0;">Stock Quantity *</p>
+                  <input type="number" placeholder="0" />
+                </div>
+                <div class="div4">
+                  <p style="padding-bottom: 10px;">Stock Status</p>
+                  <select id="stockStatus">
+                    <option value="instock">In Stock</option>
+                    <option value="lowstock">Low Stock</option>
+                    <option value="outstock">Out of Stock</option>
+                  </select>
+                </div>
+                <div class="div3">
+                  <p style="padding: 0px 0px 10px 0px;">Supplier</p>
+                  <input type="text" placeholder="Supplier Name" />
+                </div>
+              </div>
+            </div>
+
+
+
+
+          </div>
+          <div class="div-upload">
+            <div class="upload-box">
+              <h3>Product Image</h3>
+
+              <label class="upload-area">
+                <input type="file" accept="image/*" hidden />
+                <div class="icon">⬆</div>
+                <p>
+                  Drop your image here, or <span class="browse">browse</span>
+                </p>
+                <small>Supports: JPG, PNG, GIF (Max 5MB)</small>
+              </label>
+            </div>
+
+            <div class="save-or-cancel">
+              <p class="product-1" style="padding-left: 0;">Actions</p>
+              <a href="./notificationAfterSave.html">
+              <div class="save">
+              <svg style="color: #fff;"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-floppy"
+                viewBox="0 0 16 16"
+              >
+                <path d="M11 2H9v3h2z" />
+                <path
+                  d="M1.5 0h11.586a1.5 1.5 0 0 1 1.06.44l1.415 1.414A1.5 1.5 0 0 1 16 2.914V14.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5v-13A1.5 1.5 0 0 1 1.5 0M1 1.5v13a.5.5 0 0 0 .5.5H2v-4.5A1.5 1.5 0 0 1 3.5 9h9a1.5 1.5 0 0 1 1.5 1.5V15h.5a.5.5 0 0 0 .5-.5V2.914a.5.5 0 0 0-.146-.353l-1.415-1.415A.5.5 0 0 0 13.086 1H13v4.5A1.5 1.5 0 0 1 11.5 7h-7A1.5 1.5 0 0 1 3 5.5V1H1.5a.5.5 0 0 0-.5.5m3 4a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5V1H4zM3 15h10v-4.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5z"
+                /></svg><span>Lưu sản phẩm</span></div></a>
+
+                <a href="./productManagement.html"><div style="border: 2px solid #2563eb;" class="Cancel"><i class="bi bi-x-lg" style="padding-right: 10px;"></i><span>Cancel</span></div></a>
+            </div>
+            <div class="div-last">
+              <p class="product-1" style="padding: 0;">Product Status</p>
+              <div class="flex-layout-10">
+                <div><span>Created:</span></div>
+                <div><span>20/11/2025</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
