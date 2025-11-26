@@ -1,0 +1,417 @@
+.container{
+    display: flex;
+    width: 95%;
+    margin: auto;
+}
+header{
+    background-color: #fff;
+    position:relative;
+    box-shadow: 0 8px 20px rgba(129, 145, 210, 0.2);
+    width: 100%;
+}
+.header-left{
+    display: flex;
+}
+.header-right{
+    display: flex;
+    gap: 20px;
+}
+.logo img{
+    width: 75px;
+    height: 70px;
+}
+.container{
+    justify-content: space-between;
+}
+svg{
+    color: #8d7c83;
+}
+input{
+    border: none;
+    outline: none;
+}
+.hamburger{
+    padding: 26px 0px 0px 50px;
+}
+.search-icon{
+    padding: 28px 0px 0px 30px;
+}
+.search{
+    padding: 29px 0px 0px 5px;
+}
+.bell-dot{
+    position: relative;
+}
+.dot p{
+    position: absolute;
+    top: -62px;
+    left: 5px;
+}
+.padding-same{
+    padding: 27px 0px 0px 0px;
+}
+.user-icon{
+    padding: 22px 0px 0px 0px;
+}
+body{
+    background-color: #f5f7ff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', 'Roboto', 'Helvetica Neue', sans-serif;
+}
+.flex-menu-bar{
+    display: flex;
+    padding: 10px 5px 10px 5px;
+}
+.menu-bar{
+    padding: 15px 15px 0px 15px;
+    background-color: #fff;
+}
+.main{
+    display: grid;
+    grid-template-columns: 1fr 5.5fr;
+}
+p{
+    padding: 0px 0px 0px 10px;
+    margin: 0;
+    font-size: 15px;
+    
+}
+.icon-menu-bar{
+    padding-left: 10px;
+}
+.p-same-style{
+    color: #8d7c83;
+}
+/* 
+
+ */
+.content p,h4{
+    margin: 0;
+    padding: 0;
+}
+.content{
+    padding: 30px;
+}
+.welcome-date{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.hi-admin p{
+    font-size: 23px;
+    font-weight: 550;
+}
+.date{
+    display: flex;
+    gap: 5px;
+    padding: 5px 10px 5px 18px;
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.full-date:hover .dates{
+    display: block;
+}
+.notification{
+    padding: 10px 0px 50px 0px;
+}
+.image img{
+    border-radius: 20px;
+}
+.image{
+    position: relative;
+}
+.temperature{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.content-mid{
+    display: flex;
+    gap: 40px;
+}
+.grid-2colum-2row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    color: #fff;
+}
+.grid1{
+    background-color: #7da0fa;
+}
+.grid2{
+    background-color: #4747a1;
+}
+.grid3{
+    background-color: #7978e9;
+}
+.grid4{
+    background-color: #f3797e;
+}
+.grid-layout{
+    padding: 20px 70px 10px 20px; 
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+.number-samestyle{
+    font-size: 30px;
+}
+/* 
+
+
+
+ */
+     /* Container chính của biểu đồ */
+.chart-container {
+    display: flex;
+}
+.content-continue{
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* --- Trục Y (Giá trị tiền) --- */
+.y-axis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 350px; /* Chiều cao của khu vực biểu đồ */
+    margin-right: 10px;
+    font-size: 12px;
+    color: #888;
+    position: relative;
+    padding-bottom: 20px; /* Khoảng cách cho label trục X */
+}
+
+.y-axis span {
+    height: calc(100% / 6); /* Chia đều 6 khoảng (0$ đến 600$) */
+    line-height: 1;
+    padding-right: 5px;
+}
+
+/* --- Khu vực Biểu đồ (Các cột và lưới) --- */
+.chart-area {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end; /* Bắt đầu các cột từ dưới lên */
+    width: 100%;
+    height: 350px; /* Phải khớp với chiều cao y-axis */
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc; /* Đường viền trục X */
+}
+
+/* Dải lưới ngang nhạt */
+.grid-line {
+    position: absolute;
+    width: 100%;
+    border-top: 1px solid #eee; /* Viền nhạt (light border) */
+    left: 0;
+    /* Dùng top: 0, 16.66%, 33.33%, 50%, 66.66%, 83.33% để định vị 6 đường lưới */
+}
+
+/* Nhóm cột của từng tháng */
+.month-group {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    position: relative;
+    width: 60px; /* Chiều rộng tổng của nhóm cột */
+    margin: 0 5px;
+    height: 100%;
+}
+
+/* Cột dữ liệu */
+.bar {
+    width: 25px; /* Chiều rộng của mỗi cột */
+    margin: 0 2.5px; /* Khoảng cách giữa 2 cột trong nhóm */
+    position: relative;
+    /* Đảm bảo cột được đặt tại đáy */
+    align-self: flex-end; 
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    transition: height 0.3s ease; /* Hiệu ứng chuyển động (tùy chọn) */
+}
+
+/* Màu sắc của cột */
+.light-blue {
+    background-color: #9cbaff; /* Màu xanh nhạt */
+}
+
+.dark-blue {
+    background-color: #37469a; /* Màu xanh đậm */
+}
+
+/* Label tên tháng */
+.x-label {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #555;
+    white-space: nowrap;
+}
+.title1{
+    padding-bottom: 20px;
+}
+.flex-layout{
+    display: flex;
+    padding-bottom: 20px;
+    gap: 10px;
+}
+.color{
+    width: 27px;
+    height: 5px;
+    border-radius: 10px;
+    margin-top: 6px;
+}
+.color1{
+    background-color: #9cbaff;
+}
+.color2{
+    background-color: #37469a;
+}
+/* 
+
+
+
+
+ */
+.top-product{
+    background-color: #fff;
+    padding: 20px;
+}
+table{
+    width: 100%;
+}
+.top-product {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.top-product .title1 p {
+  margin: 0 0 14px 0;
+}
+
+.top-product table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.top-product thead td {
+  padding: 25px 10px;
+  font-weight: 600;
+  color: #475569;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.top-product tbody tr td {
+  padding: 23px 10px;
+  color: #334155;
+}
+
+/* dòng hover */
+.top-product tbody tr:hover {
+  background: #f8fafc;
+  cursor: pointer;
+}
+
+/* status badge */
+.top-product tbody td:last-child {
+  font-weight: 600;
+}
+
+/* Completed */
+.top-product tbody tr td:last-child:contains("Completed") {
+  color: #10b981;
+}
+.top-product tbody tr td:last-child:contains("Completed")::before {
+  color: #10b981;
+}
+
+/* Pending */
+.top-product tbody tr td:last-child:contains("Pending") {
+  color: #f59e0b;
+}
+.top-product tbody tr td:last-child:contains("Pending")::before {
+  color: #f59e0b;
+}
+
+/* Cancelled */
+.top-product tbody tr td:last-child:contains("Cancelled") {
+  color: #ef4444;
+}
+.top-product tbody tr td:last-child:contains("Cancelled")::before {
+  color: #ef4444;
+}
+
+/* Bo góc cho dòng đầu - cuối */
+.top-product tbody tr:first-child td:first-child {
+  border-top-left-radius: 8px;
+}
+.top-product tbody tr:first-child td:last-child {
+  border-top-right-radius: 8px;
+}
+.top-product tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 8px;
+}
+.top-product tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 8px;
+}
+
+
+/* Base badge */
+.status {
+  padding: 4px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 25px;
+  border: 1.5px solid;
+  display: inline-block;
+  background: transparent; /* nền trong suốt */
+}
+
+/* Completed = xanh lá */
+.status.completed {
+  color: #10b981;
+  border-color: #10b981;
+}
+
+/* Pending = vàng */
+.status.pending {
+  color: #f59e0b;
+  border-color: #f59e0b;
+}
+
+/* Cancelled = đỏ */
+.status.cancelled {
+  color: #ef4444;
+  border-color: #ef4444;
+}
+a{
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+.dates{
+    position: absolute;
+    top: 120%;
+    width: 195px;
+    right: 0.5px;
+    cursor: pointer;
+}
+.date1:hover{
+    background-color: #cbcbcb;
+}
